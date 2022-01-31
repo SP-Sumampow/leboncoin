@@ -21,3 +21,6 @@
 /.env.test
 /.env
 .DS_Store
+
+/symfony/var/cache
+/symfony/var/log
