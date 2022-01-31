@@ -57,9 +57,14 @@ class Ad
     #[ORM\OneToMany(mappedBy: 'ad', targetEntity: Media::class, orphanRemoval: true)]
     private $medias;
 
-    #[ORM\ManyToMany(targetEntity: Tag::class, inversedBy: 'ads')]
+    #[ORM\ManyToMany(targetEntity: Tag::class, inversedBy: 'ads', cascade: ['persist'])]
     private $tags;
 
+    #[ORM\Column(type: 'string', length: 255)]
+    private $currency;
+
+    #[ORM\Column(type: 'string', length: 6)]
+    private $validationCode;
 
     public function __construct()
     {
@@ -259,6 +264,31 @@ class Ad
     public function removeTag(Tag $tag): self
     {
         $this->tags->removeElement($tag);
+
+        return $this;
+    }
+
+    public function getCurrency(): ?string
+    {
+        return $this->currency;
+    }
+
+    public function setCurrency(string $currency): self
+    {
+        $this->currency = $currency;
+
+        return $this;
+    }
+
+
+    public function getValidationCode(): ?string
+    {
+        return $this->validationCode;
+    }
+
+    public function setValidationCode(string $validationCode): self
+    {
+        $this->validationCode = $validationCode;
 
         return $this;
     }

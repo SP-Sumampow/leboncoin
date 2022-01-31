@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Service;
-enum ACLType: string
+namespace App\Entity;
+
+enum UserACLType: string
 {
     case USER = "ROLE_LEBONCOINDUPAUVRE_USER";
     case ADMIN = "ROLE_ADMIN";

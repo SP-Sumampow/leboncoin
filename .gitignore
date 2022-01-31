@@ -20,3 +20,4 @@
 ###< phpunit/phpunit ###
 /.env.test
 /.env
+.DS_Store
