@@ -2,9 +2,9 @@
 
 namespace App\Entity;
 
-enum AdStatusType: string
+enum AdStatusType: int
 {
-    case AVAILABLE = "available";
-    case RESERVED = "reserved";
-    case SOLD = "sold";
+    case AVAILABLE = 0;
+    case RESERVED = 1;
+    case SOLD = 2;
 }

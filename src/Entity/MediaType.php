@@ -2,9 +2,9 @@
 
 namespace App\Entity;
 
-enum MediaType: string
+enum MediaType: int
 {
-    case PICTURE = "picture";
-    case VIDEO = "video";
-    case SOUND = "sound";
+    case PICTURE = 0;
+    case VIDEO = 1;
+    case SOUND = 2;
 }

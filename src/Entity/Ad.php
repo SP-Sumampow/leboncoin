@@ -30,7 +30,7 @@ class Ad
     #[ORM\Column(type: 'string', length: 255)]
     private $postalCode;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'integer', length: 255)]
     private $status;
 
     #[Gedmo\Timestampable(on: 'create')]
@@ -126,12 +126,12 @@ class Ad
         return $this;
     }
 
-    public function getStatus(): ?string
+    public function getStatus(): ?int
     {
         return $this->status;
     }
 
-    public function setStatus(string $status): self
+    public function setStatus(int $status): self
     {
         $this->status = $status;
 
