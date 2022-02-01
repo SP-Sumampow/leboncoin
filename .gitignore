@@ -30,7 +30,10 @@ symfony/vendor/*
 # Cache, session files and logs (Symfony3)
 symfony/var/cache/*
 symfony/var/logs/*
+symfony/var/dev/*
 symfony/var/sessions/*
 symfony/!var/cache/.gitkeep
 symfony/!var/logs/.gitkeep
 symfony/!var/sessions/.gitkeep
+/symfony/var/log/dev.log
+/symfony/var/cache/dev/*
