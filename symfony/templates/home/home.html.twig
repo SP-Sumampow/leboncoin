@@ -1,5 +1,7 @@
 {# templates/home/home.html.twig #}
 {% extends "./layout.html.twig" %}
 {% block body %}
-    <h1>HOME coucou</h1>
+    <img src="{{ absolute_url(asset('images/logo.png')) }}"/>
+    <h1>WELCOME</h1>
+    <a href="{{ url("login") }}">Connexion</a>
 {% endblock %}
