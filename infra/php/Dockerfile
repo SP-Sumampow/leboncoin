@@ -12,4 +12,6 @@ RUN npm install --global yarn
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www
 CMD composer install ;  php-fpm
+RUN composer require symfony/webpack-encore-bundle
+RUN yarn install
 EXPOSE 9000
