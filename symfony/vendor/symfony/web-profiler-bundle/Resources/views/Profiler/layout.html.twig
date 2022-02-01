@@ -1,4 +1,4 @@
-{% extends '@WebProfiler/Profiler/base.html.twig' %}
+{% extends '@WebProfiler/Profiler/layout.html.twig' %}
 
 {% block body %}
     {{ include('@WebProfiler/Profiler/header.html.twig', with_context = false) }}
@@ -38,10 +38,10 @@
                                     {% if redirect.controller.class is defined -%}
                                         {%- set link = controller.file|file_link(controller.line) -%}
                                         {% if link %}<a href="{{ link }}" title="{{ controller.file }}">{% endif -%}
-                                            {{ redirect_route }}
+                                        {{ redirect_route }}
                                         {%- if link %}</a>{% endif -%}
                                     {%- else -%}
-                                            {{ redirect_route }}
+                                        {{ redirect_route }}
                                     {%- endif %}
                                     (<a href="{{ path('_profiler', { token: redirect.token, panel: request.query.get('panel', 'request') }) }}">{{ redirect.token }}</a>)
                                 </dd>
@@ -62,7 +62,7 @@
                                         {% else %}
                                             {{- controller -}}
                                         {% endif %}
-                                    {%- if link %}</a>{% endif %}
+                                        {%- if link %}</a>{% endif %}
                                     (<a href="{{ path('_profiler', { token: request_collector.forwardtoken }) }}">{{ request_collector.forwardtoken }}</a>)
                                 </dd>
                             </dl>
@@ -81,7 +81,9 @@
                             </dd>
 
                             <dt>Profiled on</dt>
-                            <dd><time datetime="{{ profile.time|date('c') }}">{{ profile.time|date('r') }}</time></dd>
+                            <dd>
+                                <time datetime="{{ profile.time|date('c') }}">{{ profile.time|date('r') }}</time>
+                            </dd>
 
                             <dt>Token</dt>
                             <dd>{{ profile.token }}</dd>
@@ -102,9 +104,11 @@
                         </a>
 
                         <a class="btn btn-sm" href="{{ path('_profiler_search', { limit: 10 }) }}">Last 10</a>
-                        <a class="btn btn-sm" href="{{ path('_profiler', { token: 'latest' }|merge(request.query.all)) }}">Latest</a>
+                        <a class="btn btn-sm"
+                           href="{{ path('_profiler', { token: 'latest' }|merge(request.query.all)) }}">Latest</a>
 
-                        <a class="sf-toggle btn btn-sm" data-toggle-selector="#sidebar-search" {% if tokens is defined or about is defined %}data-toggle-initial="display"{% endif %}>
+                        <a class="sf-toggle btn btn-sm" data-toggle-selector="#sidebar-search"
+                           {% if tokens is defined or about is defined %}data-toggle-initial="display"{% endif %}>
                             {{ include('@WebProfiler/Icon/search.svg') }} <span class="hidden-small">Search</span>
                         </a>
 

@@ -1,4 +1,3 @@
-
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -22,5 +21,16 @@
 /.env
 .DS_Store
 
-/symfony/var/cache
-/symfony/var/log
+# Logs (Symfony4)
+symfony/var/log/*
+symfony/var/cache/*
+symfony!var/log/.gitkeep
+symfony/vendor/*
+
+# Cache, session files and logs (Symfony3)
+symfony/var/cache/*
+symfony/var/logs/*
+symfony/var/sessions/*
+symfony/!var/cache/.gitkeep
+symfony/!var/logs/.gitkeep
+symfony/!var/sessions/.gitkeep

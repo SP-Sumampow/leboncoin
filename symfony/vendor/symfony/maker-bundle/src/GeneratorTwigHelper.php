@@ -28,33 +28,33 @@ final class GeneratorTwigHelper
         $twigField = preg_replace_callback('/(?!^)_([a-z0-9])/', function ($s) {
             return strtoupper($s[1]);
         }, $field['fieldName']);
-        $printCode = $entity.'.'.str_replace('_', '', $twigField);
+        $printCode = $entity . '.' . str_replace('_', '', $twigField);
 
         switch ($field['type']) {
             case 'datetimetz_immutable':
             case 'datetimetz':
-                $printCode .= ' ? '.$printCode.'|date(\'Y-m-d H:i:s T\') : \'\'';
+                $printCode .= ' ? ' . $printCode . '|date(\'Y-m-d H:i:s T\') : \'\'';
                 break;
             case 'datetime_immutable':
             case 'datetime':
-                $printCode .= ' ? '.$printCode.'|date(\'Y-m-d H:i:s\') : \'\'';
+                $printCode .= ' ? ' . $printCode . '|date(\'Y-m-d H:i:s\') : \'\'';
                 break;
             case 'dateinterval':
-                $printCode .= ' ? '.$printCode.'.format(\'%y year(s), %m month(s), %d day(s)\') : \'\'';
+                $printCode .= ' ? ' . $printCode . '.format(\'%y year(s), %m month(s), %d day(s)\') : \'\'';
                 break;
             case 'date_immutable':
             case 'date':
-                $printCode .= ' ? '.$printCode.'|date(\'Y-m-d\') : \'\'';
+                $printCode .= ' ? ' . $printCode . '|date(\'Y-m-d\') : \'\'';
                 break;
             case 'time_immutable':
             case 'time':
-                $printCode .= ' ? '.$printCode.'|date(\'H:i:s\') : \'\'';
+                $printCode .= ' ? ' . $printCode . '|date(\'H:i:s\') : \'\'';
                 break;
             case 'json':
-                $printCode .= ' ? '.$printCode.'|json_encode : \'\'';
+                $printCode .= ' ? ' . $printCode . '|json_encode : \'\'';
                 break;
             case 'array':
-                $printCode .= ' ? '.$printCode.'|join(\', \') : \'\'';
+                $printCode .= ' ? ' . $printCode . '|join(\', \') : \'\'';
                 break;
             case 'boolean':
                 $printCode .= ' ? \'Yes\' : \'No\'';
@@ -66,9 +66,9 @@ final class GeneratorTwigHelper
 
     public function getHeadPrintCode($title): string
     {
-        if ($this->fileManager->fileExists($this->fileManager->getPathForTemplate('base.html.twig'))) {
+        if ($this->fileManager->fileExists($this->fileManager->getPathForTemplate('layout.html.twig'))) {
             return <<<TWIG
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
 
 {% block title %}$title{% endblock %}
 

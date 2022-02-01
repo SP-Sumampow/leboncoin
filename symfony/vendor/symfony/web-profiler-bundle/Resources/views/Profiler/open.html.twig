@@ -1,4 +1,4 @@
-{% extends '@WebProfiler/Profiler/base.html.twig' %}
+{% extends '@WebProfiler/Profiler/layout.html.twig' %}
 
 {% block head %}
     <style>
@@ -10,7 +10,9 @@
     {% set source = filename|file_excerpt(line, -1) %}
     <div class="header">
         <h1>{{ file }}{% if 0 < line %} <small>line {{ line }}</small>{% endif %}</h1>
-        <a class="doc" href="https://symfony.com/doc/{{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}/reference/configuration/framework.html#ide" rel="help">Open in your IDE?</a>
+        <a class="doc"
+           href="https://symfony.com/doc/{{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}/reference/configuration/framework.html#ide"
+           rel="help">Open in your IDE?</a>
     </div>
     <div class="source">
         {% if source is null %}

@@ -127,6 +127,7 @@ final class Versions
   'symfony/var-dumper' => 'v6.0.3@7b701676fc64f9ef11f9b4870f16b48f66be4834',
   'symfony/var-exporter' => 'v6.0.3@1261b2d4a23081cb2b59a4caa311a5ac43b845b6',
   'symfony/web-link' => 'v6.0.3@52d6af6c4476c8ebdef968cb39030826253eb5e4',
+  'symfony/webpack-encore-bundle' => 'v1.13.2@509cad50878e838c879743225e0e921b3b64a3f2',
   'symfony/yaml' => 'v6.0.3@e77f3ea0b21141d771d4a5655faa54f692b34af5',
   'symfonycasts/verify-email-bundle' => 'v1.7.0@7b17b150c39d115141cb462862baac9c281a3de9',
   'twig/extra-bundle' => 'v3.3.7@e0cc9c35a0650006b0da232a3f749cc060c65d3b',
