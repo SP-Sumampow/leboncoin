@@ -1,0 +1,17 @@
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  color: white !important;
+  box-shadow: 0 0 16px rgb(13 35 57 / 10%);
+
+}
+
+.header__logo {
+  max-width: 200px;
+}
+.header__search {
+  min-width: fit-content !important;
+}
+

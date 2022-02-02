@@ -14,6 +14,11 @@
         {% endblock %}
     </head>
     <body>
+      {{ include('./components/header/header.html.twig') }}
+      <div class="body container">
         {% block body %}{% endblock %}
+      </div>
+      {{ include('./components/footer/footer.html.twig') }}
     </body>
+    
 </html>
