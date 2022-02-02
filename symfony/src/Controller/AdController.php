@@ -28,7 +28,7 @@ class AdController extends AbstractController
      *     name="getAd",
      *     methods={"GET","HEAD"})
      */
-    public function showAd(int $id, LoggerInterface $logger): Response
+    public function showAd(int $id): Response
     {
         return $this->render('ad/ad.html.twig', [
             'number' => $id,

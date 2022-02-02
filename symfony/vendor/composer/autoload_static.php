@@ -615,9 +615,12 @@ class ComposerStaticInitfa05075d9e0c3023ec9c2f7d00fccfc0
     );
 
     public static $classMap = array (
+        'App\\Controller\\AdController' => __DIR__ . '/../..' . '/src/Controller/AdController.php',
         'App\\Controller\\BlogApiController' => __DIR__ . '/../..' . '/src/Controller/BlogApiController.php',
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
         'App\\Controller\\LuckyController' => __DIR__ . '/../..' . '/src/Controller/LuckyController.php',
+        'App\\Controller\\SignInController' => __DIR__ . '/../..' . '/src/Controller/SignInController.php',
+        'App\\Controller\\SignUpController' => __DIR__ . '/../..' . '/src/Controller/SignUpController.php',
         'App\\DataFixtures\\AdFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/AdFixtures.php',
         'App\\DataFixtures\\MediaFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/MediaFixtures.php',
         'App\\DataFixtures\\MessageFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/MessageFixtures.php',
