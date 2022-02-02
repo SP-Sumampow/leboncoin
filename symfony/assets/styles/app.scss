@@ -1,13 +1,40 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./_header.scss";
+@import "./_footer.scss";
 
 
-$color-green: red;
+$color-yellow: #f0b914;
+$color-purple: #1c2331;
+$color-text: #222;
 $background: #FFF;
 
 body {
   background-color: $background;
 
   h1 {
-    color: $color-green;
+    color: $color-purple;
   }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+
+
+.container-body {
+  min-height: 80vh;
+  padding-top: 112px !important;
+}
+
+.article {
+  height: fit-content;
+}
+
+
+
+
+.btn-primary--custom {
+  background-color: #ffc107 !important;
+  border-color: #f0b914 !important;
 }
