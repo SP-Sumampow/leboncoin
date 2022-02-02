@@ -1,18 +1,18 @@
 @import "~bootstrap/scss/bootstrap";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import "./variables.scss";
 @import "./_header.scss";
 @import "./_footer.scss";
 
 
-$color-yellow: #f0b914;
-$color-purple: #1c2331;
-$color-text: #222;
-$background: #FFF;
+
+
 
 body {
   background-color: $background;
 
   h1 {
-    color: $color-purple;
+    color: $color-text;
   }
 
   a {
@@ -29,12 +29,21 @@ body {
 
 .article {
   height: fit-content;
+  cursor: pointer !important;
 }
 
 
 
 
 .btn-primary--custom {
-  background-color: #ffc107 !important;
-  border-color: #f0b914 !important;
+  background-color: $color-verdigris !important;
+  border-color: $color-verdigris !important;
+  transition: ease-in 300ms;
+
+  &:hover {
+    transition: ease-in 300ms;
+    background-color: $color-sandy !important;
+    border-color: $color-sandy !important;
+
+  }
 }
