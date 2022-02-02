@@ -1,6 +1,25 @@
+.footer {
+
+  &__top {
+
+  }
+
+  &__socials {
+
+    a {
+      color: $color-verdigris !important;
+      transition: ease-in 300ms;
+
+      &:hover {
+        transition: ease-in 300ms;
+        color: $color-bluegraphite !important;
+      }
+    }
+  }
 
 
-.footer  {
-  height: 150px;
-  border-top: 1px solid rgb(192, 211, 243);
+  &__bottom {
+    border-top: 1px solid rgb(201, 201, 201);
+
+  }
 }

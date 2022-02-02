@@ -1,5 +1,66 @@
-{# templates/home/signIn.html.twig #}
-{% extends "./layout.html.twig" %}
-{% block body %}
-    <h1>Connexion</h1>
+{# templates/home/signIn.html.twig #} {% extends "./layout.html.twig" %} {%
+block body %}
+
+<section class="signin py-5">
+    <form class="signin__form form-container w-50 m-auto container bg-light p-5">
+      <h3 class="mb-5">Se connecter</h3>
+    <!-- Email input -->
+    <div class="form-outline mb-3">
+      <input type="email" id="form2Example1" class="form-control" />
+      <label class="form-label" for="form2Example1">Email address</label>
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-3">
+      <input type="password" id="form2Example2" class="form-control" />
+      <label class="form-label" for="form2Example2">Password</label>
+    </div>
+
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-3">
+      <div class="col d-flex justify-content-center">
+        <!-- Checkbox -->
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="form2Example34"
+            checked
+          />
+          <label class="form-check-label" for="form2Example34">
+            Remember me
+          </label>
+        </div>
+      </div>
+
+      <div class="col">
+        <!-- Simple link -->
+        <a class="text-body t-link" href="#!">Forgot password?</a>
+      </div>
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-secondary--custom btn-block mb-4 text-white">
+      Sign in
+    </button>
+
+    <!-- Register buttons -->
+    <div class="text-center text-body">
+      <p class=""> Not a member? <a class="text-body t-link" href="#!">Register</a></p>
+      <p class="text-body">or sign up with:</p>
+      <button type="button" class="btn btn-primary--custom btn-floating mx-1 text-white rounded-circle">
+        <i class="fab fa-facebook-f "></i>
+      </button>
+
+      <button type="button" class="btn btn-primary--custom btn-floating mx-1 text-white rounded-circle">
+        <i class="fab fa-instagram"></i>
+      </button>
+
+      <button type="button" class="btn btn-primary--custom btn-floating mx-1 text-white rounded-circle">
+        <i class="fab fa-twitter"></i>
+      </button>
+    </div>
+  </form>
+</section>
 {% endblock %}
