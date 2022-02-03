@@ -1,11 +1,11 @@
 {# templates/home/signIn.html.twig #} {% extends "./layout.html.twig" %} 
 {% block body %}
     {% if error %}
-        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        <div class="text-error">{{ error.messageKey|trans(error.messageData, 'security') }}Message d'erreur</div>
     {% endif %}
-<section class="signin py-5">
+<section class="signin py-3">
     <form action="{{ path('signIn') }}" method="post" class="signin__form form-container w-50 m-auto container bg-light p-5">
-      <h3 class="mb-5">Se connecter</h3>
+      <h3 class="mb-3">Se connecter</h3>
       <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
     <!-- Email input -->
     <div class="form-outline mb-3">
@@ -14,14 +14,14 @@
     </div>
 
     <!-- Password input -->
-    <div class="form-outline mb-3">
+    <div class="form-outline mb-2">
       <input type="password" name="_password" id="form2Example2" class="form-control" />
       <label class="form-label" for="form2Example2">Password</label>
     </div>
 
     <!-- 2 column grid layout for inline styling -->
     <div class="row mb-3">
-      <div class="col d-flex justify-content-center">
+      <div class="col d-flex justify-content-start">
         <!-- Checkbox -->
         <div class="form-check">
           <input
@@ -44,7 +44,10 @@
     </div>
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-secondary--custom btn-block mb-4 text-white">
+    <button
+      type="submit"
+      class="btn btn-secondary--custom btn-block mb-2 text-white"
+    >
       Sign in
     </button>
 
@@ -53,19 +56,10 @@
 
     <!-- Register buttons -->
     <div class="text-center text-body">
-      <p class=""> Not a member? <a class="text-body t-link" href="#!">Register</a></p>
-      <p class="text-body">or sign up with:</p>
-      <button type="button" class="btn btn-primary--custom btn-floating mx-1 text-white rounded-circle">
-        <i class="fab fa-facebook-f "></i>
-      </button>
-
-      <button type="button" class="btn btn-primary--custom btn-floating mx-1 text-white rounded-circle">
-        <i class="fab fa-instagram"></i>
-      </button>
-
-      <button type="button" class="btn btn-primary--custom btn-floating mx-1 text-white rounded-circle">
-        <i class="fab fa-twitter"></i>
-      </button>
+      <p class="mb-1">
+        Not a member?
+        <a class="text-body t-link" href="#!">Register</a>
+      </p>
     </div>
   </form>
 </section>

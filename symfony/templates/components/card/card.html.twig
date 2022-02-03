@@ -1,187 +1,657 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+  <div class="col">
+    <article id="article_" class="article_ article card">
+      <img
+        src="{{ absolute_url(asset('images/string-borat.jpeg')) }}"
+        class="card-img-top"
+        alt=""
+        style="max-height: 300px"
+      />
+      <div class="card-body">
+        <h5 class="card-title">String Borat</h5>
+        <p class="card-text">19 <span>€</span></p>
+        <!-- Button trigger modal -->
+        <a
+          href="#"
+          class="btn btn-primary btn-primary--custom w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#openModal"
+        >
+          Voir plus
+        </a>
+        <!-- Modal -->
+        <div
+          class="modal"
+          id="openModal"
+          tabindex="-1"
+          aria-labelledby="modalLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+          >
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">String Borat</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body p-4">
+                <div class="d-flex flex-column flex-lg-row">
+                  <div class="modal-body__img mb-3 mb-lg-0 w-100 w-lg-75">
+                    <img
+                      src="{{
+                        absolute_url(asset('images/string-borat.jpeg'))
+                      }}"
+                      class="card-img-top w-100"
+                      alt=""
+                      style="max-height: 500px; object-fit: contain"
+                    />
+                  </div>
+                  <div class="w-100">
+                    <div class="p-3 bg-light rounded mb-2">
+                      <div class="modal-body__content">
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Marque: </span>
+                          <span class="variable">Underwear Paris</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Taille: </span>
+                          <span class="variable">3XL</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">État: </span>
+                          <span class="variable">Très mauvais</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Couleur: </span>
+                          <span class="variable">Vert</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary"
+                            >Nombre de vues:
+                          </span>
+                          <span class="variable">1</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Ajouté: </span>
+                          <span class="variable">Il y a 1 minute</span>
+                        </div>
+                      </div>
+                      <div class="description mt-4">
+                        <span class="text-secondary">Description :</span>
+                        <p>
+                          Tempor reprehenderit ex officia ex exercitation
+                          laborum officia enim.Ut velit amet enim ut ea
+                          excepteur nisi.
+                        </p>
+                      </div>
+                      <div class="d-flex flex-column mt-4">
+                        <button
+                          type="button"
+                          class="btn btn-primary--custom mb-3"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fas"
+                            data-icon="face-grin-hearts"
+                            class="svg-inline--fa fa-face-grin-hearts"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256.3 331.8C208.9 331.8 164.1 324.9 124.5 312.8C112.2 309 100.2 319.7 105.2 331.5C130.1 390.6 188.4 432 256.3 432C324.2 432 382.4 390.6 407.4 331.5C412.4 319.7 400.4 309 388.1 312.8C348.4 324.9 303.7 331.8 256.3 331.8H256.3zM199.3 129.1C181.5 124.4 163.2 134.9 158.4 152.7L154.1 168.8L137.1 164.5C120.2 159.7 101.9 170.3 97.14 188.1C92.38 205.8 102.9 224.1 120.7 228.9L185.8 246.3C194.4 248.6 203.1 243.6 205.4 235L222.9 169.1C227.6 152.2 217.1 133.9 199.3 129.1H199.3zM353.6 152.7C348.8 134.9 330.5 124.4 312.7 129.1C294.9 133.9 284.4 152.2 289.1 169.1L306.6 235C308.9 243.6 317.6 248.6 326.2 246.3L391.3 228.9C409.1 224.1 419.6 205.8 414.9 188.1C410.1 170.3 391.8 159.7 374 164.5L357.9 168.8L353.6 152.7z"
+                            ></path>
+                          </svg>
+                          Add to my list
+                        </button>
+                        <button type="button" class="btn btn-secondary--custom">
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fas"
+                            data-icon="cart-plus"
+                            class="svg-inline--fa fa-cart-plus"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM272 180H316V224C316 235 324.1 244 336 244C347 244 356 235 356 224V180H400C411 180 420 171 420 160C420 148.1 411 140 400 140H356V96C356 84.95 347 76 336 76C324.1 76 316 84.95 316 96V140H272C260.1 140 252 148.1 252 160C252 171 260.1 180 272 180zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"
+                            ></path>
+                          </svg>
+                          Buy now
+                        </button>
+                      </div>
+                    </div>
 
+                    <div
+                      class="seller bg-light rounded p-3 d-flex flex-row justify-content-start align-items-center"
+                    >
+                      <div class="seller__picture rounded-circle m-2">
+                        <img
+                          src="{{
+                            absolute_url(asset('images/photo2profil.jpg'))
+                          }}"
+                          class="card-img-top rounded-circle"
+                          alt=""
+                          style="width: 60px; height: 60px; object-fit: cover"
+                        />
+                      </div>
+                      <div
+                        class="seller__container p-2 d-flex justify-content-start flex-column"
+                      >
+                        <h6 class="seller__name t-link--active mb-1">
+                          itsanthonio
+                        </h6>
+                        <p class="seller__average m-0">OOOOO</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="col">
+    <article id="article_" class="article_ article card">
+      <img
+        src="{{ absolute_url(asset('images/string-borat.jpeg')) }}"
+        class="card-img-top"
+        alt=""
+        style="max-height: 300px"
+      />
+      <div class="card-body">
+        <h5 class="card-title">String Borat</h5>
+        <p class="card-text">19 <span>€</span></p>
+        <!-- Button trigger modal -->
+        <a
+          href="#"
+          class="btn btn-primary btn-primary--custom w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#openModal"
+        >
+          Voir plus
+        </a>
+        <!-- Modal -->
+        <div
+          class="modal"
+          id="openModal"
+          tabindex="-1"
+          aria-labelledby="modalLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+          >
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">String Borat</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body p-4">
+                <div class="d-flex flex-column flex-lg-row">
+                  <div class="modal-body__img mb-3 mb-lg-0 w-100 w-lg-75">
+                    <img
+                      src="{{
+                        absolute_url(asset('images/string-borat.jpeg'))
+                      }}"
+                      class="card-img-top w-100"
+                      alt=""
+                      style="max-height: 500px; object-fit: contain"
+                    />
+                  </div>
+                  <div class="w-100">
+                    <div class="p-3 bg-light rounded mb-2">
+                      <div class="modal-body__content">
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Marque: </span>
+                          <span class="variable">Underwear Paris</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Taille: </span>
+                          <span class="variable">3XL</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">État: </span>
+                          <span class="variable">Très mauvais</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Couleur: </span>
+                          <span class="variable">Vert</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary"
+                            >Nombre de vues:
+                          </span>
+                          <span class="variable">1</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Ajouté: </span>
+                          <span class="variable">Il y a 1 minute</span>
+                        </div>
+                      </div>
+                      <div class="description mt-4">
+                        <span class="text-secondary">Description :</span>
+                        <p>
+                          Tempor reprehenderit ex officia ex exercitation
+                          laborum officia enim.Ut velit amet enim ut ea
+                          excepteur nisi.
+                        </p>
+                      </div>
+                      <div class="d-flex flex-column mt-4">
+                        <button
+                          type="button"
+                          class="btn btn-primary--custom mb-3"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fas"
+                            data-icon="face-grin-hearts"
+                            class="svg-inline--fa fa-face-grin-hearts"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256.3 331.8C208.9 331.8 164.1 324.9 124.5 312.8C112.2 309 100.2 319.7 105.2 331.5C130.1 390.6 188.4 432 256.3 432C324.2 432 382.4 390.6 407.4 331.5C412.4 319.7 400.4 309 388.1 312.8C348.4 324.9 303.7 331.8 256.3 331.8H256.3zM199.3 129.1C181.5 124.4 163.2 134.9 158.4 152.7L154.1 168.8L137.1 164.5C120.2 159.7 101.9 170.3 97.14 188.1C92.38 205.8 102.9 224.1 120.7 228.9L185.8 246.3C194.4 248.6 203.1 243.6 205.4 235L222.9 169.1C227.6 152.2 217.1 133.9 199.3 129.1H199.3zM353.6 152.7C348.8 134.9 330.5 124.4 312.7 129.1C294.9 133.9 284.4 152.2 289.1 169.1L306.6 235C308.9 243.6 317.6 248.6 326.2 246.3L391.3 228.9C409.1 224.1 419.6 205.8 414.9 188.1C410.1 170.3 391.8 159.7 374 164.5L357.9 168.8L353.6 152.7z"
+                            ></path>
+                          </svg>
+                          Add to my list
+                        </button>
+                        <button type="button" class="btn btn-secondary--custom">
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fas"
+                            data-icon="cart-plus"
+                            class="svg-inline--fa fa-cart-plus"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM272 180H316V224C316 235 324.1 244 336 244C347 244 356 235 356 224V180H400C411 180 420 171 420 160C420 148.1 411 140 400 140H356V96C356 84.95 347 76 336 76C324.1 76 316 84.95 316 96V140H272C260.1 140 252 148.1 252 160C252 171 260.1 180 272 180zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"
+                            ></path>
+                          </svg>
+                          Buy now
+                        </button>
+                      </div>
+                    </div>
 
+                    <div
+                      class="seller bg-light rounded p-3 d-flex flex-row justify-content-start align-items-center"
+                    >
+                      <div class="seller__picture rounded-circle m-2">
+                        <img
+                          src="{{
+                            absolute_url(asset('images/photo2profil.jpg'))
+                          }}"
+                          class="card-img-top rounded-circle"
+                          alt=""
+                          style="width: 60px; height: 60px; object-fit: cover"
+                        />
+                      </div>
+                      <div
+                        class="seller__container p-2 d-flex justify-content-start flex-column"
+                      >
+                        <h6 class="seller__name t-link--active mb-1">
+                          itsanthonio
+                        </h6>
+                        <p class="seller__average m-0">OOOOO</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="col">
+    <article id="article_" class="article_ article card">
+      <img
+        src="{{ absolute_url(asset('images/string-borat.jpeg')) }}"
+        class="card-img-top"
+        alt=""
+        style="max-height: 300px"
+      />
+      <div class="card-body">
+        <h5 class="card-title">String Borat</h5>
+        <p class="card-text">19 <span>€</span></p>
+        <!-- Button trigger modal -->
+        <a
+          href="#"
+          class="btn btn-primary btn-primary--custom w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#openModal"
+        >
+          Voir plus
+        </a>
+        <!-- Modal -->
+        <div
+          class="modal"
+          id="openModal"
+          tabindex="-1"
+          aria-labelledby="modalLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+          >
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">String Borat</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body p-4">
+                <div class="d-flex flex-column flex-lg-row">
+                  <div class="modal-body__img mb-3 mb-lg-0 w-100 w-lg-75">
+                    <img
+                      src="{{
+                        absolute_url(asset('images/string-borat.jpeg'))
+                      }}"
+                      class="card-img-top w-100"
+                      alt=""
+                      style="max-height: 500px; object-fit: contain"
+                    />
+                  </div>
+                  <div class="w-100">
+                    <div class="p-3 bg-light rounded mb-2">
+                      <div class="modal-body__content">
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Marque: </span>
+                          <span class="variable">Underwear Paris</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Taille: </span>
+                          <span class="variable">3XL</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">État: </span>
+                          <span class="variable">Très mauvais</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Couleur: </span>
+                          <span class="variable">Vert</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary"
+                            >Nombre de vues:
+                          </span>
+                          <span class="variable">1</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Ajouté: </span>
+                          <span class="variable">Il y a 1 minute</span>
+                        </div>
+                      </div>
+                      <div class="description mt-4">
+                        <span class="text-secondary">Description :</span>
+                        <p>
+                          Tempor reprehenderit ex officia ex exercitation
+                          laborum officia enim.Ut velit amet enim ut ea
+                          excepteur nisi.
+                        </p>
+                      </div>
+                      <div class="d-flex flex-column mt-4">
+                        <button
+                          type="button"
+                          class="btn btn-primary--custom mb-3"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fas"
+                            data-icon="face-grin-hearts"
+                            class="svg-inline--fa fa-face-grin-hearts"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256.3 331.8C208.9 331.8 164.1 324.9 124.5 312.8C112.2 309 100.2 319.7 105.2 331.5C130.1 390.6 188.4 432 256.3 432C324.2 432 382.4 390.6 407.4 331.5C412.4 319.7 400.4 309 388.1 312.8C348.4 324.9 303.7 331.8 256.3 331.8H256.3zM199.3 129.1C181.5 124.4 163.2 134.9 158.4 152.7L154.1 168.8L137.1 164.5C120.2 159.7 101.9 170.3 97.14 188.1C92.38 205.8 102.9 224.1 120.7 228.9L185.8 246.3C194.4 248.6 203.1 243.6 205.4 235L222.9 169.1C227.6 152.2 217.1 133.9 199.3 129.1H199.3zM353.6 152.7C348.8 134.9 330.5 124.4 312.7 129.1C294.9 133.9 284.4 152.2 289.1 169.1L306.6 235C308.9 243.6 317.6 248.6 326.2 246.3L391.3 228.9C409.1 224.1 419.6 205.8 414.9 188.1C410.1 170.3 391.8 159.7 374 164.5L357.9 168.8L353.6 152.7z"
+                            ></path>
+                          </svg>
+                          Add to my list
+                        </button>
+                        <button type="button" class="btn btn-secondary--custom">
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fas"
+                            data-icon="cart-plus"
+                            class="svg-inline--fa fa-cart-plus"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM272 180H316V224C316 235 324.1 244 336 244C347 244 356 235 356 224V180H400C411 180 420 171 420 160C420 148.1 411 140 400 140H356V96C356 84.95 347 76 336 76C324.1 76 316 84.95 316 96V140H272C260.1 140 252 148.1 252 160C252 171 260.1 180 272 180zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"
+                            ></path>
+                          </svg>
+                          Buy now
+                        </button>
+                      </div>
+                    </div>
 
+                    <div
+                      class="seller bg-light rounded p-3 d-flex flex-row justify-content-start align-items-center"
+                    >
+                      <div class="seller__picture rounded-circle m-2">
+                        <img
+                          src="{{
+                            absolute_url(asset('images/photo2profil.jpg'))
+                          }}"
+                          class="card-img-top rounded-circle"
+                          alt=""
+                          style="width: 60px; height: 60px; object-fit: cover"
+                        />
+                      </div>
+                      <div
+                        class="seller__container p-2 d-flex justify-content-start flex-column"
+                      >
+                        <h6 class="seller__name t-link--active mb-1">
+                          itsanthonio
+                        </h6>
+                        <p class="seller__average m-0">OOOOO</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="col">
+    <article id="article_" class="article_ article card">
+      <img
+        src="{{ absolute_url(asset('images/string-borat.jpeg')) }}"
+        class="card-img-top"
+        alt=""
+        style="max-height: 300px"
+      />
+      <div class="card-body">
+        <h5 class="card-title">String Borat</h5>
+        <p class="card-text">19 <span>€</span></p>
+        <!-- Button trigger modal -->
+        <a
+          href="#"
+          class="btn btn-primary btn-primary--custom w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#openModal"
+        >
+          Voir plus
+        </a>
+        <!-- Modal -->
+        <div
+          class="modal"
+          id="openModal"
+          tabindex="-1"
+          aria-labelledby="modalLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+          >
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">String Borat</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body p-4">
+                <div class="d-flex flex-column flex-lg-row">
+                  <div class="modal-body__img mb-3 mb-lg-0 w-100 w-lg-75">
+                    <img
+                      src="{{
+                        absolute_url(asset('images/string-borat.jpeg'))
+                      }}"
+                      class="card-img-top w-100"
+                      alt=""
+                      style="max-height: 500px; object-fit: contain"
+                    />
+                  </div>
+                  <div class="w-100">
+                    <div class="p-3 bg-light rounded mb-2">
+                      <div class="modal-body__content">
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Marque: </span>
+                          <span class="variable">Underwear Paris</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Taille: </span>
+                          <span class="variable">3XL</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">État: </span>
+                          <span class="variable">Très mauvais</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Couleur: </span>
+                          <span class="variable">Vert</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary"
+                            >Nombre de vues:
+                          </span>
+                          <span class="variable">1</span>
+                        </div>
+                        <div class="items d-flex justify-content-between">
+                          <span class="element text-secondary">Ajouté: </span>
+                          <span class="variable">Il y a 1 minute</span>
+                        </div>
+                      </div>
+                      <div class="description mt-4">
+                        <span class="text-secondary">Description :</span>
+                        <p>
+                          Tempor reprehenderit ex officia ex exercitation
+                          laborum officia enim.Ut velit amet enim ut ea
+                          excepteur nisi.
+                        </p>
+                      </div>
+                      <div class="d-flex flex-column mt-4">
+                        <button
+                          type="button"
+                          class="btn btn-primary--custom mb-3"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fas"
+                            data-icon="face-grin-hearts"
+                            class="svg-inline--fa fa-face-grin-hearts"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256.3 331.8C208.9 331.8 164.1 324.9 124.5 312.8C112.2 309 100.2 319.7 105.2 331.5C130.1 390.6 188.4 432 256.3 432C324.2 432 382.4 390.6 407.4 331.5C412.4 319.7 400.4 309 388.1 312.8C348.4 324.9 303.7 331.8 256.3 331.8H256.3zM199.3 129.1C181.5 124.4 163.2 134.9 158.4 152.7L154.1 168.8L137.1 164.5C120.2 159.7 101.9 170.3 97.14 188.1C92.38 205.8 102.9 224.1 120.7 228.9L185.8 246.3C194.4 248.6 203.1 243.6 205.4 235L222.9 169.1C227.6 152.2 217.1 133.9 199.3 129.1H199.3zM353.6 152.7C348.8 134.9 330.5 124.4 312.7 129.1C294.9 133.9 284.4 152.2 289.1 169.1L306.6 235C308.9 243.6 317.6 248.6 326.2 246.3L391.3 228.9C409.1 224.1 419.6 205.8 414.9 188.1C410.1 170.3 391.8 159.7 374 164.5L357.9 168.8L353.6 152.7z"
+                            ></path>
+                          </svg>
+                          Add to my list
+                        </button>
+                        <button type="button" class="btn btn-secondary--custom">
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fas"
+                            data-icon="cart-plus"
+                            class="svg-inline--fa fa-cart-plus"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM272 180H316V224C316 235 324.1 244 336 244C347 244 356 235 356 224V180H400C411 180 420 171 420 160C420 148.1 411 140 400 140H356V96C356 84.95 347 76 336 76C324.1 76 316 84.95 316 96V140H272C260.1 140 252 148.1 252 160C252 171 260.1 180 272 180zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"
+                            ></path>
+                          </svg>
+                          Buy now
+                        </button>
+                      </div>
+                    </div>
 
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <article id="article_" class="article_ article card" style="width:100%; max-width:388px;">
-      <img src="" class="card-img-top img-thumbnail" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Title</h5>
-        <p class="card-text">Description</p>
-        <!-- Button trigger modal -->
-        <a href="#" class="btn btn-primary btn-primary--custom" data-bs-toggle="modal" data-bs-target="#openModal">
-          Voir plus
-        </a>
-        <!-- Modal -->
-        <div class="modal " id="openModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="col">
-    <article id="article_" class="article_ article card" style="width:100%; max-width:388px;">
-      <img src="" class="card-img-top img-thumbnail" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Title</h5>
-        <p class="card-text">Description</p>
-        <!-- Button trigger modal -->
-        <a href="#" class="btn btn-primary btn-primary--custom" data-bs-toggle="modal" data-bs-target="#openModal">
-          Voir plus
-        </a>
-        <!-- Modal -->
-        <div class="modal " id="openModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="col">
-    <article id="article_" class="article_ article card" style="width:100%; max-width:388px;">
-      <img src="" class="card-img-top img-thumbnail" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Title</h5>
-        <p class="card-text">Description</p>
-        <!-- Button trigger modal -->
-        <a href="#" class="btn btn-primary btn-primary--custom" data-bs-toggle="modal" data-bs-target="#openModal">
-          Voir plus
-        </a>
-        <!-- Modal -->
-        <div class="modal " id="openModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="col">
-    <article id="article_" class="article_ article card" style="width:100%; max-width:388px;">
-      <img src="" class="card-img-top img-thumbnail" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Title</h5>
-        <p class="card-text">Description</p>
-        <!-- Button trigger modal -->
-        <a href="#" class="btn btn-primary btn-primary--custom" data-bs-toggle="modal" data-bs-target="#openModal">
-          Voir plus
-        </a>
-        <!-- Modal -->
-        <div class="modal " id="openModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="col">
-    <article id="article_" class="article_ article card" style="width:100%; max-width:388px;">
-      <img src="" class="card-img-top img-thumbnail" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Title</h5>
-        <p class="card-text">Description</p>
-        <!-- Button trigger modal -->
-        <a href="#" class="btn btn-primary btn-primary--custom" data-bs-toggle="modal" data-bs-target="#openModal">
-          Voir plus
-        </a>
-        <!-- Modal -->
-        <div class="modal " id="openModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="col">
-    <article id="article_" class="article_ article card" style="width:100%; max-width:388px;">
-      <img src="" class="card-img-top img-thumbnail" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Title</h5>
-        <p class="card-text">Description</p>
-        <!-- Button trigger modal -->
-        <a href="#" class="btn btn-primary btn-primary--custom" data-bs-toggle="modal" data-bs-target="#openModal">
-          Voir plus
-        </a>
-        <!-- Modal -->
-        <div class="modal " id="openModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                    <div
+                      class="seller bg-light rounded p-3 d-flex flex-row justify-content-start align-items-center"
+                    >
+                      <div class="seller__picture rounded-circle m-2">
+                        <img
+                          src="{{
+                            absolute_url(asset('images/photo2profil.jpg'))
+                          }}"
+                          class="card-img-top rounded-circle"
+                          alt=""
+                          style="width: 60px; height: 60px; object-fit: cover"
+                        />
+                      </div>
+                      <div
+                        class="seller__container p-2 d-flex justify-content-start flex-column"
+                      >
+                        <h6 class="seller__name t-link--active mb-1">
+                          itsanthonio
+                        </h6>
+                        <p class="seller__average m-0">OOOOO</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -190,5 +660,4 @@
     </article>
   </div>
 
-  
 </div>
