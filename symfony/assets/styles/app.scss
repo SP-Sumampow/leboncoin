@@ -26,6 +26,16 @@ body {
     color: $color-verdigris !important;
     border-bottom: solid 1px $color-verdigris;
   }
+
+  &--active {
+    color: $color-verdigris !important;
+    
+    &:hover {
+      transition: ease-in 300ms;
+      color: $color-verdigris !important;
+      border-bottom: solid 1px $color-verdigris;
+    }
+  }
 }
 
 .container-body {
@@ -47,22 +57,28 @@ body {
     background-color: $color-verdigris !important;
     border-color: $color-verdigris !important;
     transition: ease-in 300ms;
+    color: white;
 
     &:hover {
       transition: ease-in 300ms;
       background-color: $color-bluegraphite !important;
       border-color: $color-bluegraphite !important;
+      color: white;
+
     }
   }
   &-secondary--custom {
     background-color: $color-sandy !important;
     border-color: $color-sandy !important;
     transition: ease-in 300ms;
+    color: white;
+
 
     &:hover {
       transition: ease-in 300ms;
       background-color: $color-yellow !important;
       border-color: $color-yellow !important;
+      color: white;
     }
   }
 }

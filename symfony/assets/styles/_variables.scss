@@ -1,9 +1,26 @@
-
-$color-verdigris: #28AFB0;
-$color-bluegraphite: #19647E;
-$color-yellow: #F4D35E;
-$color-sandy: #EE964B;
-$color-eggplant: #1F0022;
-$color-ivoire: #FFFFF0;
+$color-verdigris: #28afb0;
+$color-bluegraphite: #19647e;
+$color-yellow: #f4d35e;
+$color-sandy: #ee964b;
+$color-eggplant: #1f0022;
+$color-ivoire: #fffff0;
 $color-text: #222;
-$background: #FFF;
+$background: #fff;
+
+.text {
+  &-verdigris {
+    color: $color-verdigris;
+  }
+  &-blue-graphite {
+    color: $color-bluegraphite;
+  }
+  &-yellow {
+    color: $color-yellow;
+  }
+  &-sandy {
+    color: $color-sandy;
+  }
+  &-black {
+    color: $color-text;
+  }
+}
