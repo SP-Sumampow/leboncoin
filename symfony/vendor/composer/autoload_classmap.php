@@ -12,6 +12,8 @@ return array(
     'App\\Controller\\LuckyController' => $baseDir . '/src/Controller/LuckyController.php',
     'App\\Controller\\SignInController' => $baseDir . '/src/Controller/SignInController.php',
     'App\\Controller\\SignUpController' => $baseDir . '/src/Controller/SignUpController.php',
+    'App\\Controller\\UserController' => $baseDir . '/src/Controller/UserController.php',
+    'App\\Controller\\api\\ApiUserController' => $baseDir . '/src/Controller/api/ApiUserController.php',
     'App\\DataFixtures\\AdFixtures' => $baseDir . '/src/DataFixtures/AdFixtures.php',
     'App\\DataFixtures\\MediaFixtures' => $baseDir . '/src/DataFixtures/MediaFixtures.php',
     'App\\DataFixtures\\MessageFixtures' => $baseDir . '/src/DataFixtures/MessageFixtures.php',

@@ -621,6 +621,8 @@ class ComposerStaticInitfa05075d9e0c3023ec9c2f7d00fccfc0
         'App\\Controller\\LuckyController' => __DIR__ . '/../..' . '/src/Controller/LuckyController.php',
         'App\\Controller\\SignInController' => __DIR__ . '/../..' . '/src/Controller/SignInController.php',
         'App\\Controller\\SignUpController' => __DIR__ . '/../..' . '/src/Controller/SignUpController.php',
+        'App\\Controller\\UserController' => __DIR__ . '/../..' . '/src/Controller/UserController.php',
+        'App\\Controller\\api\\ApiUserController' => __DIR__ . '/../..' . '/src/Controller/api/ApiUserController.php',
         'App\\DataFixtures\\AdFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/AdFixtures.php',
         'App\\DataFixtures\\MediaFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/MediaFixtures.php',
         'App\\DataFixtures\\MessageFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/MessageFixtures.php',

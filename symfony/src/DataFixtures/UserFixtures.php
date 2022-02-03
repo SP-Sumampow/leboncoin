@@ -29,7 +29,7 @@ class UserFixtures extends Fixture
     {
         $buyer = new User();
         $buyer->setEmail("buyer@leboncoindupauvre.fr");
-        $buyer->setPassword("hackme");
+        $buyer->setPassword('$2y$13$c/umjzqzxH3KNhIEQLwh1ODwS8r2b3/YU1kY0Th6p8lICYclUXvyK'); //hackme
         $buyer->setRoles([UserACLType::USER]);
         return $buyer;
     }
@@ -38,7 +38,7 @@ class UserFixtures extends Fixture
     {
         $seller = new User();
         $seller->setEmail("seller@leboncoindupauvre.fr");
-        $seller->setPassword("hackme");
+        $seller->setPassword('$2y$13$c/umjzqzxH3KNhIEQLwh1ODwS8r2b3/YU1kY0Th6p8lICYclUXvyK'); //hackme
         $seller->setRoles([UserACLType::ADMIN]);
         return $seller;
     }
