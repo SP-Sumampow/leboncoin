@@ -35,9 +35,11 @@ class AdController extends AbstractController
      *     name="getAd",
      *     methods={"GET","HEAD"})
      */
-    public function showAd(string $id, AdRepository $adRepository): Response
+    public function showAd(string $id, AdRepository $adRepository, TagRepository $tagRepository): Response
     {
+        $tags = $tagRepository->findAll();
         return $this->render('ad/ad.html.twig', [
+            'tags' => $tags,
             'ad' => $adRepository->find($id),
         ]);
     }
