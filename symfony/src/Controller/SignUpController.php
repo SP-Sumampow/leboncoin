@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\TagRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,8 +12,11 @@ class SignUpController extends AbstractController
     /**
      * + @Route("/signUp", "signUp")
      */
-    public function number(): Response
+    public function signUp(TagRepository $tagRepository): Response
     {
-        return $this->render('signUp/signUp.html.twig');
+        $tags = $tagRepository->findAll();
+        return $this->render('signUp/signUp.html.twig', [
+            'tags' => $tags,
+        ]);
     }
 }
