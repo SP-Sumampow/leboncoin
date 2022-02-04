@@ -37,7 +37,7 @@ class AdController extends AbstractController
 
     /**
      * @Route("postAd",
-     *     name="getAd",
+     *     name="postAd",
      *     methods={"GET","POST"})
      */
     public function postAd(): Response
