@@ -17,7 +17,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * + @Route("/user/buyAds", "buyAds")
+     * + @Route("/user/buyAds", "buy_ads")
      */
     public function buyAds(): Response
     {
@@ -25,7 +25,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * + @Route("/user/sellAds", "sellAds")
+     * + @Route("/user/sellAds", "sell_ads")
      */
     public function sellAds(): Response
     {
