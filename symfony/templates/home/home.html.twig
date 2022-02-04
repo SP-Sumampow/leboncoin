@@ -1,12 +1,12 @@
-{# templates/home/home.html.twig #} {% extends "./layout.html.twig" %}
+{# templates/home/home.html.twig #}
+{% extends "./layout.html.twig" %}
 {% block body %}
 
+    {{ include("components/hero/hero.html.twig") }}
 
-{{ include("components/hero/hero.html.twig") }}
-
-<section class="bg-light p-4 rounded form-container">
-  <h2 class="mb-4 text-black">Latest arrivals</h2>
-  {{ include("components/card/card.html.twig") }}
-</section>
+    <section class="bg-light p-4 rounded form-container">
+        <h2 class="mb-4 text-black">Latest arrivals</h2>
+        {{ include("components/card/card.html.twig", { ads: lastAdArrived, tags: tags }) }}
+    </section>
 
 {% endblock %}
