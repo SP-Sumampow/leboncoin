@@ -13,6 +13,8 @@ class MediaFixtures extends Fixture implements DependentFixtureInterface
     public const MEDIA_AD_1_IPHONE13_1 = 'photo_ad1_iphone13_1';
     public const MEDIA_AD_1_IPHONE13_2 = 'photo_ad1_iphone13_2';
 
+    public const MEDIA_AD_DRESS = 'photo_dress_1';
+
     public function load(ObjectManager $manager)
     {
         $media1 = new Media();
@@ -28,6 +30,13 @@ class MediaFixtures extends Fixture implements DependentFixtureInterface
         $this->addReference(MediaFixtures::MEDIA_AD_1_IPHONE13_2, $media2);
         $media2->setAd($this->getReference(AdFixtures::AD_IPHONE13));
         $manager->persist($media2);
+
+        $media3 = new Media();
+        $media3->setType(MediaType::PICTURE->value);
+        $media3->setUrl("https://firebasestorage.googleapis.com/v0/b/testo--backoffice.appspot.com/o/a5e577afd7ae450bb6c5ddf1daee2f78.jpeg?alt=media&token=0569c56f-3239-4ddc-895b-1c200f2c9f9e");
+        $this->addReference(MediaFixtures::MEDIA_AD_DRESS, $media3);
+        $media3->setAd($this->getReference(AdFixtures::AD_2_RED_DRESS));
+        $manager->persist($media3);
 
         $manager->flush();
     }
