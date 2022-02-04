@@ -1,75 +1,119 @@
 <header class="header ">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 text-light">
-    <div class="container">
-      <a class="navbar-brand mr-30 header__logo" href="/">
-        <img src="{{ absolute_url(asset('images/logo.png')) }}" class="card-img-top  " alt="LeBonCoin">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse me-auto d-flex-md justify-content-between" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0 me-4 ">
-          <li class="nav-item px-0 mx-2" style="min-height: 26px;">
-            <a class="nav-link p-0 active a-icon" aria-current="page" href="/"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="house" class="svg-inline--fa fa-house" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="" d="M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z"></path></svg></a>
-          </li>
-          <li class="nav-item px-0 mx-2">
-            <a class="nav-link p-0 active t-link" href="/">Contact</a>
-          </li>
-          <li class="nav-item dropdown px-0 mx-2">
-            <a class="nav-link p-0 active t-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Category
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 text-light">
+        <div class="container">
+            <a class="navbar-brand mr-30 header__logo" href="/">
+                <img src="{{ absolute_url(asset('images/logo.png')) }}" class="card-img-top  " alt="LeBonCoin">
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/ads/Cars">Cars</a></li>
-              <li><a class="dropdown-item" href="/ads/Mens clothes">Mens clothes</a></li>
-              <li><a class="dropdown-item" href="/ads/Womens clothes/">Womens clothes</a></li>
-              <li><a class="dropdown-item" href="/ads/Decoration">Decoration</a></li>
-              <li><a class="dropdown-item" href="/ads/DIY">DIY</a></li>
-              <li><a class="dropdown-item" href="/ads/Home appliances">Home appliances</a></li>
-              <li><a class="dropdown-item" href="/ads/Books">Books</a></li>
-              <li><a class="dropdown-item" href="/ads/Game for kids">Game for kids</a></li>
-    
-            </ul>
-          </li>
-        </ul>
-        <div class="log">
-          {% if is_granted('ROLE_USER')%}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse me-auto d-flex-md justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 me-4 ">
+                    <li class="nav-item px-0 mx-2" style="min-height: 26px;">
+                        <a class="nav-link p-0 active a-icon" aria-current="page" href="/">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="house"
+                                 class="svg-inline--fa fa-house" role="img" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 576 512">
+                                <path fill=""
+                                      d="M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item px-0 mx-2">
+                        <a class="nav-link p-0 active t-link" href="/">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown px-0 mx-2">
+                        <a class="nav-link p-0 active t-link dropdown-toggle" href="/" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Category
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% for tag in tags %}
+                                <li><a class="dropdown-item"
+                                       href="{{ path('getAds', { tagId: tag.id}) }}">{{ tag.name|e }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+                <div class="log">
+                    {% if is_granted('ROLE_USER') %}
 
-          {% else %}
+                    {% else %}
 
-          <a href="{{ url("signUp") }}">            
-            <button class="btn btn-secondary--custom text-light" type="submit">
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-pen" class="svg-inline--fa fa-user-pen" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#FFFFF2" d="M223.1 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 223.1 256zM274.7 304H173.3C77.61 304 0 381.7 0 477.4C0 496.5 15.52 512 34.66 512h286.4c-1.246-5.531-1.43-11.31-.2832-17.04l14.28-71.41c1.943-9.723 6.676-18.56 13.68-25.56l45.72-45.72C363.3 322.4 321.2 304 274.7 304zM371.4 420.6c-2.514 2.512-4.227 5.715-4.924 9.203l-14.28 71.41c-1.258 6.289 4.293 11.84 10.59 10.59l71.42-14.29c3.482-.6992 6.682-2.406 9.195-4.922l125.3-125.3l-72.01-72.01L371.4 420.6zM629.5 255.7l-21.1-21.11c-14.06-14.06-36.85-14.06-50.91 0l-38.13 38.14l72.01 72.01l38.13-38.13C643.5 292.5 643.5 269.7 629.5 255.7z"></path></svg> Sign up</button>
-          </a>
-          {% endif %}
-          {% if is_granted('ROLE_ADMIN')%}
-          <a href="/commentaire">            
-            <button class="btn btn-secondary--custom text-light" type="submit">
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" class="svg-inline--fa fa-comments" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#FFFFF2" d="M416 176C416 78.8 322.9 0 208 0S0 78.8 0 176c0 39.57 15.62 75.96 41.67 105.4c-16.39 32.76-39.23 57.32-39.59 57.68c-2.1 2.205-2.67 5.475-1.441 8.354C1.9 350.3 4.602 352 7.66 352c38.35 0 70.76-11.12 95.74-24.04C134.2 343.1 169.8 352 208 352C322.9 352 416 273.2 416 176zM599.6 443.7C624.8 413.9 640 376.6 640 336C640 238.8 554 160 448 160c-.3145 0-.6191 .041-.9336 .043C447.5 165.3 448 170.6 448 176c0 98.62-79.68 181.2-186.1 202.5C282.7 455.1 357.1 512 448 512c33.69 0 65.32-8.008 92.85-21.98C565.2 502 596.1 512 632.3 512c3.059 0 5.76-1.725 7.02-4.605c1.229-2.879 .6582-6.148-1.441-8.354C637.6 498.7 615.9 475.3 599.6 443.7z"></path></svg> My reviews</button>
-          </a>          
-          {% endif %}
+                        <a href="{{ url("signUp") }}">
+                            <button class="btn btn-secondary--custom text-light" type="submit">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-pen"
+                                     class="svg-inline--fa fa-user-pen" role="img" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 640 512">
+                                    <path fill="#FFFFF2"
+                                          d="M223.1 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 223.1 256zM274.7 304H173.3C77.61 304 0 381.7 0 477.4C0 496.5 15.52 512 34.66 512h286.4c-1.246-5.531-1.43-11.31-.2832-17.04l14.28-71.41c1.943-9.723 6.676-18.56 13.68-25.56l45.72-45.72C363.3 322.4 321.2 304 274.7 304zM371.4 420.6c-2.514 2.512-4.227 5.715-4.924 9.203l-14.28 71.41c-1.258 6.289 4.293 11.84 10.59 10.59l71.42-14.29c3.482-.6992 6.682-2.406 9.195-4.922l125.3-125.3l-72.01-72.01L371.4 420.6zM629.5 255.7l-21.1-21.11c-14.06-14.06-36.85-14.06-50.91 0l-38.13 38.14l72.01 72.01l38.13-38.13C643.5 292.5 643.5 269.7 629.5 255.7z"></path>
+                                </svg>
+                                Sign up
+                            </button>
+                        </a>
+                    {% endif %}
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a href="/commentaire">
+                            <button class="btn btn-secondary--custom text-light" type="submit">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments"
+                                     class="svg-inline--fa fa-comments" role="img"
+                                     xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 640 512">
+                                    <path fill="#FFFFF2"
+                                          d="M416 176C416 78.8 322.9 0 208 0S0 78.8 0 176c0 39.57 15.62 75.96 41.67 105.4c-16.39 32.76-39.23 57.32-39.59 57.68c-2.1 2.205-2.67 5.475-1.441 8.354C1.9 350.3 4.602 352 7.66 352c38.35 0 70.76-11.12 95.74-24.04C134.2 343.1 169.8 352 208 352C322.9 352 416 273.2 416 176zM599.6 443.7C624.8 413.9 640 376.6 640 336C640 238.8 554 160 448 160c-.3145 0-.6191 .041-.9336 .043C447.5 165.3 448 170.6 448 176c0 98.62-79.68 181.2-186.1 202.5C282.7 455.1 357.1 512 448 512c33.69 0 65.32-8.008 92.85-21.98C565.2 502 596.1 512 632.3 512c3.059 0 5.76-1.725 7.02-4.605c1.229-2.879 .6582-6.148-1.441-8.354C637.6 498.7 615.9 475.3 599.6 443.7z"></path>
+                                </svg>
+                                My reviews
+                            </button>
+                        </a>
+                    {% endif %}
 
-          {% if is_granted('ROLE_USER')%}
-          <a href="{{ url("logout") }}">            
-            <button class="btn btn-secondary--custom text-light" type="submit"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-xmark" class="svg-inline--fa fa-user-xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#FFFFF2" d="M274.7 304H173.3C77.61 304 0 381.6 0 477.3C0 496.5 15.52 512 34.66 512h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM224 256c70.7 0 128-57.31 128-128S294.7 0 224 0C153.3 0 96 57.31 96 128S153.3 256 224 256zM577.9 223.1l47.03-47.03c9.375-9.375 9.375-24.56 0-33.94s-24.56-9.375-33.94 0L544 190.1l-47.03-47.03c-9.375-9.375-24.56-9.375-33.94 0s-9.375 24.56 0 33.94l47.03 47.03l-47.03 47.03c-9.375 9.375-9.375 24.56 0 33.94c9.373 9.373 24.56 9.381 33.94 0L544 257.9l47.03 47.03c9.373 9.373 24.56 9.381 33.94 0c9.375-9.375 9.375-24.56 0-33.94L577.9 223.1z"></path></svg> Log off</button>
-          </a>
-          {% else %}
-          <a href="{{ url("signIn") }}">            
-            <button class="btn btn-secondary--custom text-light" type="submit">
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-check" class="svg-inline--fa fa-user-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#FFFFF2" d="M274.7 304H173.3C77.61 304 0 381.6 0 477.3C0 496.5 15.52 512 34.66 512H413.3C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM224 256c70.7 0 128-57.31 128-128S294.7 0 224 0C153.3 0 96 57.31 96 128S153.3 256 224 256zM632.3 134.4c-9.703-9-24.91-8.453-33.92 1.266l-87.05 93.75l-38.39-38.39c-9.375-9.375-24.56-9.375-33.94 0s-9.375 24.56 0 33.94l56 56C499.5 285.5 505.6 288 512 288h.4375c6.531-.125 12.72-2.891 17.16-7.672l104-112C642.6 158.6 642 143.4 632.3 134.4z"></path></svg> Login</button>
-          </a>
-          {% endif %}
+                    {% if is_granted('ROLE_USER') %}
+                        <a href="{{ url("logout") }}">
+                            <button class="btn btn-secondary--custom text-light" type="submit">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="user-xmark"
+                                     class="svg-inline--fa fa-user-xmark" role="img"
+                                     xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 640 512">
+                                    <path fill="#FFFFF2"
+                                          d="M274.7 304H173.3C77.61 304 0 381.6 0 477.3C0 496.5 15.52 512 34.66 512h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM224 256c70.7 0 128-57.31 128-128S294.7 0 224 0C153.3 0 96 57.31 96 128S153.3 256 224 256zM577.9 223.1l47.03-47.03c9.375-9.375 9.375-24.56 0-33.94s-24.56-9.375-33.94 0L544 190.1l-47.03-47.03c-9.375-9.375-24.56-9.375-33.94 0s-9.375 24.56 0 33.94l47.03 47.03l-47.03 47.03c-9.375 9.375-9.375 24.56 0 33.94c9.373 9.373 24.56 9.381 33.94 0L544 257.9l47.03 47.03c9.373 9.373 24.56 9.381 33.94 0c9.375-9.375 9.375-24.56 0-33.94L577.9 223.1z"></path>
+                                </svg>
+                                Log off
+                            </button>
+                        </a>
+                    {% else %}
+                        <a href="{{ url("signIn") }}">
+                            <button class="btn btn-secondary--custom text-light" type="submit">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="user-check"
+                                     class="svg-inline--fa fa-user-check" role="img"
+                                     xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 640 512">
+                                    <path fill="#FFFFF2"
+                                          d="M274.7 304H173.3C77.61 304 0 381.6 0 477.3C0 496.5 15.52 512 34.66 512H413.3C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM224 256c70.7 0 128-57.31 128-128S294.7 0 224 0C153.3 0 96 57.31 96 128S153.3 256 224 256zM632.3 134.4c-9.703-9-24.91-8.453-33.92 1.266l-87.05 93.75l-38.39-38.39c-9.375-9.375-24.56-9.375-33.94 0s-9.375 24.56 0 33.94l56 56C499.5 285.5 505.6 288 512 288h.4375c6.531-.125 12.72-2.891 17.16-7.672l104-112C642.6 158.6 642 143.4 632.3 134.4z"></path>
+                                </svg>
+                                Login
+                            </button>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
         </div>
-      </div>
+    </nav>
+    <div class="subnavbar p-3 bg-white">
+        <form class="d-flex container w-75 align-items-center">
+            <h6 for="" class="w-25 mb-0">Find what you want</h6>
+            <input class="form-control me-2 " type="search" placeholder="iPhone 13 pro max 256go" aria-label="search">
+            <button class="btn btn-secondary--custom header__search" type="submit">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass"
+                     class="svg-inline--fa fa-magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 512 512">
+                    <path fill="#FFFFF2"
+                          d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"></path>
+                </svg>
+            </button>
+        </form>
     </div>
-  </nav>
-  <div class="subnavbar p-3 bg-white">
-    <form class="d-flex container w-75 align-items-center">
-      <h6 for="" class="w-25 mb-0">Find what you want</h6>
-      <input class="form-control me-2 " type="search" placeholder="iPhone 13 pro max 256go" aria-label="search">
-      <button class="btn btn-secondary--custom header__search" type="submit">
-      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" class="svg-inline--fa fa-magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#FFFFF2" d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"></path></svg>
-      </button>
-    </form>
-  </div>
 </header>

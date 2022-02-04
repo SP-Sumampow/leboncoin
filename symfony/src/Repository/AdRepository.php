@@ -21,15 +21,21 @@ class AdRepository extends ServiceEntityRepository
         parent::__construct($registry, Ad::class);
     }
 
-    /**
-     * @return Ad[] Returns an array of Ad objects
-     */
     public function findAllAdForCategoryId(string $categoryId)
     {
         return $this->createQueryBuilder('a')
             ->innerJoin('a.tags', 't')
             ->where('t.id = :categoryId')
             ->setParameter('categoryId', $categoryId)
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function lastAdArrived(int $limit)
+    {
+        return $this->createQueryBuilder('a')
+            ->setMaxResults($limit)
+            ->addOrderBy("a.id", "DESC")
             ->getQuery()
             ->getResult();
     }

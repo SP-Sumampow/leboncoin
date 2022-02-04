@@ -3,8 +3,8 @@
 
 {% block body %}
 
-<section class="bg-light p-4 rounded form-container">
-  <h2 class="mb-4 text-black">{{ string }}</h2>
-  {{ include("components/card/card.html.twig") }}
-</section>
+    <section class="bg-light p-4 rounded form-container">
+        <h2 class="mb-4 text-black">{{ tagName }} :</h2>
+        {{ include("components/card/card.html.twig", { ads: ads, tags: tags }) }}
+    </section>
 {% endblock %}
