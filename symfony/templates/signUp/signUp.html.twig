@@ -1,11 +1,11 @@
 {# templates/home/signUp.html.twig #} {% extends "./layout.html.twig" %} {%
 block body %}
 
-<section class="signup py-5">
+<section class="signup py-3">
   <form class="signup__form form-container w-50 m-auto container bg-light p-5">
-    <h3 class="mb-5">S'inscrire</h3>
+    <h3 class="mb-3">S'inscrire</h3>
 
-    <div class="row mb-3">
+    <div class="row mb-2">
       <div class="col">
         <div class="form-outline">
           <input type="text" id="form3Example1" class="form-control" />
@@ -21,19 +21,19 @@ block body %}
     </div>
 
     <!-- Email input -->
-    <div class="form-outline mb-3">
+    <div class="form-outline mb-2">
       <input type="email" id="form3Example3" class="form-control" />
       <label class="form-label" for="form3Example3">Email address</label>
     </div>
 
     <!-- Password input -->
-    <div class="form-outline mb-3">
+    <div class="form-outline mb-2">
       <input type="password" id="form3Example4" class="form-control" />
       <label class="form-label" for="form3Example4">Password</label>
     </div>
 
     <!-- Checkbox -->
-    <div class="form-check d-flex justify-content-center mb-4">
+    <div class="form-check d-flex justify-content-center mb-3">
       <input
         class="form-check-input me-2"
         type="checkbox"
@@ -47,25 +47,9 @@ block body %}
     </div>
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-secondary--custom text-white btn-block mb-4">
+    <button type="submit" class="btn btn-secondary--custom text-white btn-block mb-2">
       Sign up
     </button>
-
-    <!-- Register buttons -->
-    <div class="text-center">
-      <p>or sign up with:</p>
-      <button type="button" class="btn btn-primary--custom text-white rounded-circle btn-floating mx-1">
-        <i class="fab fa-facebook-f"></i>
-      </button>
-
-      <button type="button" class="btn btn-primary--custom text-white rounded-circle btn-floating mx-1">
-        <i class="fab fa-instagram"></i>
-      </button>
-
-      <button type="button" class="btn btn-primary--custom text-white rounded-circle btn-floating mx-1">
-        <i class="fab fa-twitter"></i>
-      </button>
-    </div>
   </form>
 </section>
 
