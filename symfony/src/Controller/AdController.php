@@ -6,6 +6,7 @@ use App\Repository\AdRepository;
 use App\Repository\TagRepository;
 use App\Service\MessageGenerator;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -52,5 +53,23 @@ class AdController extends AbstractController
     public function postAd(): Response
     {
         return $this->render('ad/postAd.html.twig');
+    }
+
+    /**
+     * @Route("searchAd",
+     *     name="searchAd",
+     *     methods={"POST"})
+     */
+    public function searchAd(AdRepository $adRepository, TagRepository $tagRepository, Request $request): Response
+    {
+        $searchAd = $request->request->get("searchAd");
+
+        $tags = $tagRepository->findAll();
+
+        return $this->render('ad/ads.html.twig', [
+            'tags' => $tags,
+            'tagName' => $searchAd,
+            'ads' => $adRepository->searchAd($searchAd)
+        ]);
     }
 }

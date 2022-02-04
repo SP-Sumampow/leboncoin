@@ -31,6 +31,15 @@ class AdRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    public function searchAd(string $searchAd)
+    {
+        return $this->createQueryBuilder('a')
+            ->where('a.title LIKE :title')
+            ->setParameter('title', '%' . $searchAd . '%')
+            ->getQuery()
+            ->getResult();
+    }
+
     public function lastAdArrived(int $limit)
     {
         return $this->createQueryBuilder('a')
