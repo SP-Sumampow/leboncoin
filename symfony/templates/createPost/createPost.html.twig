@@ -1,0 +1,67 @@
+{# templates/home/ad.html.twig #} {% extends "./layout.html.twig" %} {% block
+body %}
+
+<h3 class="pb-4">Write a sales post</h3>
+
+<section class="bg-light p-4 rounded form-container">
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Title</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="String à bretelles"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="floatingTextarea" class="form-label">Description</label>
+
+      <textarea
+        class="form-control me-2"
+        placeholder="Describe your product"
+        id="floatingTextarea"
+        aria-label="search"
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>tag field option</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Price</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="10"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Zip Code</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="93100"
+      />
+    </div>
+    <div class="mb-3">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Currency field option</option>
+        <option value="X">One</option>
+        <option value="X">Two</option>
+        <option value="X">Three</option>
+      </select>
+    </div>
+    <button type="submit" class="btn w-25 btn-secondary--custom mt-3">Sell !</button>
+  </form>
+</section>
+{% endblock %}
