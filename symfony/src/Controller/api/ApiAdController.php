@@ -29,6 +29,12 @@ class ApiAdController extends AbstractController
      */
     public function getAds(AdRepository $repository, SerializerInterface $serializer, Request $request): Response
     {
+        $user = $this->getUser();
+
+        if (!isset($user)) {
+            return new JsonResponse("You should be authentificate", 401);
+        }
+
         $categoryId = $request->query->get('categoryId');
 
         return match (isset($categoryId)) {
@@ -50,6 +56,12 @@ class ApiAdController extends AbstractController
      */
     public function getAdForId(int $id, AdRepository $repository, SerializerInterface $serializer): Response
     {
+        $user = $this->getUser();
+
+        if (!isset($user)) {
+            return new JsonResponse("You should be authentificate", 401);
+        }
+
         return new Response(
             $serializer->serialize($repository->find($id), 'json', ['groups' => 'show_ad']),
             Response::HTTP_OK,
@@ -135,14 +147,23 @@ class ApiAdController extends AbstractController
      */
     public function putAdForId(int $id): Response
     {
+        $user = $this->getUser();
+
+        if (!isset($user)) {
+            return new JsonResponse("You should be authentificate", 401);
+        }
         return new JsonResponse(['username' => "lol"]);
     }
 
     /**
      * @Route("/api/ad/{id}", name="api_ad_for_id_delete", methods={"DELETE"})
      */
-    public function deleteAdForId(int $id): Response
+    public function deleteAdForId(ManagerRegistry $doctrine, int $id, AdRepository $repository): Response
     {
-        return new JsonResponse(['username' => "lol"]);
+        $entityManager = $doctrine->getManager();
+        $ad = $repository->find($id);
+        $entityManager->remove($ad);
+        $entityManager->flush();
+        return new JsonResponse(['status' => "ok"]);
     }
 }
