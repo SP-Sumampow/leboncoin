@@ -2,11 +2,9 @@
 {% extends "./layout.html.twig" %}
 {% block body %}
 
-    <h1 class="mb-5">ANNONCE VENTE</h1>
-
     <section class="bg-light p-4 rounded form-container">
-        <h2 class="mb-4 text-black">Latest arrivals</h2>
-        {{ include("components/card/card.html.twig") }}
+        <h1 class="mb-5">ANNONCE VENTE</h1>
+        {{ include("components/card/card.html.twig", { ads: ads, tags: tags }) }}
     </section>
 
 {% endblock %}
