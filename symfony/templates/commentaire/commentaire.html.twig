@@ -1,5 +1,18 @@
 {# templates/home/commentaire.html.twig #} {% extends "./layout.html.twig" %} {%
 block body %}
+<div class="subnavbar p-4 bg-white">
+  <form class="d-flex container w-50 align-items-center">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Add a public comment"
+      aria-label="search"
+    />
+    <button class="btn btn-secondary--custom header__search" type="submit">
+      Send
+    </button>
+  </form>
+</div>
 <div>
   <div class="d-flex bd-highlight container__commentaire">
     <div class="p-2 flex-shrink-1 bd-highlight">
