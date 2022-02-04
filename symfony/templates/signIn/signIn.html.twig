@@ -1,8 +1,12 @@
 {# templates/home/signIn.html.twig #} {% extends "./layout.html.twig" %} {%
 block body %} {% if error %}
-<div class="text-center alert alert-danger" role="alert">
+<!-- <div class="text-center alert alert-danger" role="alert">
   {{ error.messageKey|trans(error.messageData, 'security') }}
+</div> -->
+<div class="text-center alert alert-danger" role="alert">
+  Email address or password incorect
 </div>
+
 {% endif %}
 <section class="signin py-3">
   <form
@@ -10,7 +14,8 @@ block body %} {% if error %}
     method="post"
     class="signin__form form-container w-50 m-auto container bg-light p-5"
   >
-    <h3 class="mb-3">Se connecter</h3>
+    <h3 class="mb-3">I log in
+    </h3>
     <input
       type="hidden"
       name="_csrf_token"
@@ -63,15 +68,24 @@ block body %} {% if error %}
       </div>
     </div>
 
-    <!-- Submit button -->
-    <button
-      type="submit"
-      class="btn btn-secondary--custom btn-block mb-2 text-white"
-    >
-      Sign in
-    </button>
 
-    {# If you want to control the URL the user is redirected to on success
+    <!-- Submit button -->
+    {% if is_granted('ROLE_USER')%}
+    <a class="nav-link" href="{{ url("app_login") }}">
+    {% else %}
+    <a class="nav-link" href="{{ url("logout") }}">
+    {% endif %} 
+      <button
+        type="submit"
+        class="btn btn-secondary--custom btn-block mb-2 text-white"
+      >
+      Log in now
+      </button>
+    </a>
+
+    
+    {# If you want to control the URL the user is redirected to on
+    success
     <input type="hidden" name="_target_path" value="/account" /> #}
 
     <!-- Register buttons -->
