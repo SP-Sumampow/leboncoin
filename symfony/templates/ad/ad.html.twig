@@ -4,191 +4,87 @@
 
 {% block body %}
 
+    <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">{{ ad.title }}</h5>
 
-
-<div class="modal-header d-block">
-  <h2 class="mb-4 text-black">Intégration d'annonce ici, id={{string}}</h2>
-  <h5 class="modal-title" id="modalLabel">String Borat</h5>
-</div>
-<div class="modal-body p-4">
-  <div class="d-flex flex-column flex-lg-row">
-    <div class="modal-body__img mb-3 mb-lg-0 w-100 w-lg-75 pe-lg-4">
-      <img
-        src="{{
-          absolute_url(asset('images/string-borat.jpeg'))
-        }}"
-        class="card-img-top w-100"
-        alt=""
-        style=" object-fit: contain"
-      />
     </div>
-    <div class="w-100 d-flex flex-column justify-content-between"">
-      <div class="p-3 bg-light rounded mb-2">
-        <div class="modal-body__content">
-          <div class="items d-flex justify-content-between">
-            <span class="element text-secondary fs-6">Marque: </span>
-            <span class="variable text-end fs-5">Underwear Paris</span>
-          </div>
-          <div class="items d-flex justify-content-between">
-            <span class="element text-secondary fs-6">Taille: </span>
-            <span class="variable text-end fs-5">3XL</span>
-          </div>
-          <div class="items d-flex justify-content-between">
-            <span class="element text-secondary fs-6">État: </span>
-            <span class="variable text-end fs-5">Très mauvais</span>
-          </div>
-          <div class="items d-flex justify-content-between">
-            <span class="element text-secondary fs-6">Couleur: </span>
-            <span class="variable text-end fs-5">Vert</span>
-          </div>
-          <div class="items d-flex justify-content-between">
-            <span class="element text-secondary fs-6"
-              >Nombre de vues:
-            </span>
-            <span class="variable text-end fs-5">1</span>
-          </div>
-          <div class="items d-flex justify-content-between">
-            <span class="element text-secondary fs-6">Ajouté: </span>
-            <span class="variable text-end fs-5">Il y a 1 minute</span>
-          </div>
-        </div>
-        <div class="description mt-4">
-          <span class="text-secondary fs-6">Description :</span>
-          <p class="fs-5">
-            Tempor reprehenderit ex officia ex exercitation
-            laborum officia enim.Ut velit amet enim ut ea
-            excepteur nisi.
-          </p>
-        </div>
-        <div class="description mt-4">
-          <p class="text-secondary fs-6">
-            Le droit de rétractation de l'Article L. 221-18 ainsi que le droit légal de conformité des articles L 217-4 et suivants du Code de la Consommation ne s'appliquent pas à votre transaction. La garantie contre les vices cachés des articles 1641 et suivants du Code Civil est cependant applicable, voir aussi les dispositions applicables en matière de droit des obligations et de responsabilité civile. Toutefois, si vous payez sur Vinted, votre achat est couvert par notre Protection acheteurs.
-          </p>
-        </div>
-        <div class="d-flex flex-column mt-4">
-          <a
-            href="{{ path('getAd', { id: '2' }) }}
-"
-            class="btn btn-secondary--custom fs-5"
-          >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="cart-plus"
-              class="svg-inline--fa fa-cart-plus"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 576 512"
-            >
-              <path
-                fill="currentColor"
-                d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM272 180H316V224C316 235 324.1 244 336 244C347 244 356 235 356 224V180H400C411 180 420 171 420 160C420 148.1 411 140 400 140H356V96C356 84.95 347 76 336 76C324.1 76 316 84.95 316 96V140H272C260.1 140 252 148.1 252 160C252 171 260.1 180 272 180zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"
-              ></path>
-            </svg>
-            Buy now
-          </a>
-        </div>
-        <div class="d-flex flex-column mt-2">
-            <p class="mt-2 mb-1">title</p>
-            <p class="mb-1">subtitle</p>
-          <a
-            href="{{ path('getAd', { id: '2' }) }}
-"
-            class="btn btn-secondary--custom"
-          >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="cart-plus"
-              class="svg-inline--fa fa-cart-plus"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 576 512"
-            >
-              <path
-                fill="currentColor"
-                d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM272 180H316V224C316 235 324.1 244 336 244C347 244 356 235 356 224V180H400C411 180 420 171 420 160C420 148.1 411 140 400 140H356V96C356 84.95 347 76 336 76C324.1 76 316 84.95 316 96V140H272C260.1 140 252 148.1 252 160C252 171 260.1 180 272 180zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"
-              ></path>
-            </svg>
-           Bouton
-          </a>
-        </div>
-        <div class="d-flex flex-column mt-2">
-            <p class="mt-2 mb-1">title</p>
-            <p class="mb-1">subtitle</p>
-          <a
-            href="{{ path('getAd', { id: '2' }) }}
-"
-            class="btn btn-secondary--custom mb-2"
-          >
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="cart-plus"
-              class="svg-inline--fa fa-cart-plus"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 576 512"
-            >
-              <path
-                fill="currentColor"
-                d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM272 180H316V224C316 235 324.1 244 336 244C347 244 356 235 356 224V180H400C411 180 420 171 420 160C420 148.1 411 140 400 140H356V96C356 84.95 347 76 336 76C324.1 76 316 84.95 316 96V140H272C260.1 140 252 148.1 252 160C252 171 260.1 180 272 180zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"
-              ></path>
-            </svg>
-           Bouton
-          </a>
-          <form class="">
-
-            <div class="form-floating d-flex container px-0">
-              <input
-                class="form-control me-2"
-                placeholder="Leave a comment here"
-                id="floatingTextarea"
-                aria-label="search"
-              ></input>
-              <label for="floatingTextarea">Order number</label>
-              <button class="btn btn-secondary--custom header__search" type="submit">
-                Send
-              </button>
+    <div class="modal-body p-4">
+        <div class="d-flex flex-column flex-lg-row">
+            <div class="modal-body__img mb-3 mb-lg-0 w-100 w-lg-75">
+                <img
+                        src="{{ ad.getCoverPicture() }}"
+                        class="card-img-top w-100"
+                        alt=""
+                        style="max-height: 500px; object-fit: contain"
+                />
             </div>
-          </form>
-        </div>
-      </div>
+            <div class="w-100 ">
+                <div class="p-3 bg-light rounded mb-2">
+                    <div class="modal-body__content">
+                        <div class="items d-flex justify-content-between">
+                            <span class="element text-secondary">Ajouté: </span>
+                            <span class="variable">le {{ ad.created|date("m/d/Y") }}</span>
+                        </div>
+                    </div>
+                    <div class="description mt-4">
+                        <span class="text-secondary">Description :</span>
+                        <p>
+                            {{ ad.description }}
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column mt-4">
+                        <a
+                                href="{{ path('getAd', { id: '2' }) }}
+"
+                                class="btn btn-secondary--custom"
+                        >
+                            <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    data-prefix="fas"
+                                    data-icon="cart-plus"
+                                    class="svg-inline--fa fa-cart-plus"
+                                    role="img"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512"
+                            >
+                                <path
+                                        fill="currentColor"
+                                        d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM272 180H316V224C316 235 324.1 244 336 244C347 244 356 235 356 224V180H400C411 180 420 171 420 160C420 148.1 411 140 400 140H356V96C356 84.95 347 76 336 76C324.1 76 316 84.95 316 96V140H272C260.1 140 252 148.1 252 160C252 171 260.1 180 272 180zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"
+                                ></path>
+                            </svg>
+                            Buy now
+                        </a>
+                    </div>
+                </div>
 
-      <div
-        class="seller bg-light rounded p-3 d-flex flex-row justify-content-start align-items-center"
-      >
-        <div class="seller__picture rounded-circle m-2">
-          <img
-            src="{{
-              absolute_url(asset('images/photo2profil.jpg'))
-            }}"
-            class="card-img-top rounded-circle"
-            alt=""
-            style="width: 60px; height: 60px; object-fit: cover"
-          />
-        </div>
-        <div
-          class="seller__container p-2 d-flex justify-content-start flex-column"
-        >
-          <h6 class="seller__name t-link--active mb-1">
-            itsanthonio
-          </h6>
-          <img
-          src="{{ absolute_url(asset('images/stars.png')) }}"
-          class=" seller__average m-0"
-          alt=""
-          style="max-width: 60px"
-        />
+                <div
+                        class="seller bg-light rounded p-3 d-flex flex-row justify-content-start align-items-center"
+                >
+                    <div class="seller__picture rounded-circle m-2">
+                        <img
+                                src="{{ absolute_url(asset('images/photo2profil.jpg')) }}"
+                                class="card-img-top rounded-circle"
+                                alt=""
+                                style="width: 60px; height: 60px; object-fit: cover"
+                        />
+                    </div>
+                    <div
+                            class="seller__container p-2 d-flex justify-content-start flex-column"
+                    >
+                        <h6 class="seller__name t-link--active mb-1">
+                            itsanthonio
+                        </h6>
+                        <p class="seller__average m-0">OOOOO</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-{{ include("components/commentaire/commentaire.html.twig") }}
+    {{ include("components/commentaire/commentaire.html.twig") }}
+    <!-- <section class="bg-light p-4 rounded form-container">
 
 
-{{ include("components/reviews/reviews.html.twig") }}
-
+    </section> -->
 {% endblock %}
