@@ -1,56 +1,33 @@
-{# templates/home/signUp.html.twig #} {% extends "./layout.html.twig" %} {%
-block body %}
+{# templates/home/signUp.html.twig #} {% extends "./layout.html.twig" %} {% block body %}
 
-<section class="signup py-3">
-  <form class="signup__form form-container w-50 m-auto container bg-light p-5">
-    <h3 class="mb-3">I register</h3>
+    <section class="signup py-3">
+        <form method="post" action="{{ path('signUp') }}"
+              class="signup__form form-container w-50 m-auto container bg-light p-5">
+            <h3 class="mb-3">I register</h3>
 
-    <div class="row mb-2">
-      <div class="col">
-        <div class="form-outline">
-          <input type="text" id="form3Example1" class="form-control" />
-          <label class="form-label" for="form3Example1">First name</label>
-        </div>
-      </div>
-      <div class="col">
-        <div class="form-outline">
-          <input type="text" id="form3Example2" class="form-control" />
-          <label class="form-label" for="form3Example2">Last name</label>
-        </div>
-      </div>
-    </div>
+            <input
+                    type="hidden"
+                    name="_csrf_token"
+                    value="{{ csrf_token('authenticate') }}"
+            />
+            
+            <!-- Email input -->
+            <div class="form-outline mb-2">
+                <input mame="email" type="email" id="form3Example3" class="form-control"/>
+                <label class="form-label" for="form3Example3">Email address</label>
+            </div>
 
-    <!-- Email input -->
-    <div class="form-outline mb-2">
-      <input type="email" id="form3Example3" class="form-control" />
-      <label class="form-label" for="form3Example3">Email address</label>
-    </div>
+            <!-- Password input -->
+            <div class="form-outline mb-2">
+                <input type="password" name="password" id="form3Example4" class="form-control"/>
+                <label class="form-label" for="form3Example4">Password</label>
+            </div>
 
-    <!-- Password input -->
-    <div class="form-outline mb-2">
-      <input type="password" id="form3Example4" class="form-control" />
-      <label class="form-label" for="form3Example4">Password</label>
-    </div>
-
-    <!-- Checkbox -->
-    <div class="form-check d-flex justify-content-center mb-3">
-      <input
-        class="form-check-input me-2"
-        type="checkbox"
-        value=""
-        id="form2Example33"
-        checked
-      />
-      <label class="form-check-label" for="form2Example33">
-        Subscribe to our newsletter
-      </label>
-    </div>
-
-    <!-- Submit button -->
-    <button type="submit" class="btn btn-secondary--custom text-white btn-block mb-2">
-      Sign up
-    </button>
-  </form>
-</section>
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-secondary--custom text-white btn-block mb-2">
+                Sign up
+            </button>
+        </form>
+    </section>
 
 {% endblock %}
