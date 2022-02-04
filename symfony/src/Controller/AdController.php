@@ -12,14 +12,14 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class AdController extends AbstractController
 {
     /**
-     * @Route("/ads",
+     * @Route("/ads/{categoryId}",
      *     name="getAds",
      *     methods={"GET","HEAD"})
      */
-    public function showAds(LoggerInterface $logger): Response
+    public function showAds(LoggerInterface $logger, string $categoryId): Response
     {
         return $this->render('ad/ads.html.twig', [
-            'ads' => [],
+            'string' => $categoryId,
         ]);
     }
 
@@ -28,7 +28,7 @@ class AdController extends AbstractController
      *     name="getAd",
      *     methods={"GET","HEAD"})
      */
-    public function showAd( $id): Response
+    public function showAd(string $id): Response
     {
         return $this->render('ad/ad.html.twig', [
             'string' => $id,
