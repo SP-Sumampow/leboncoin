@@ -1,20 +1,24 @@
 {# templates/home/commentaire.html.twig #} {% extends "./layout.html.twig" %} {%
 block body %}
-<div class="subnavbar p-4 bg-white">
-  <form class="d-flex container w-50 align-items-center">
-    <input
-      class="form-control me-2"
-      type="search"
-      placeholder="Add a public comment"
-      aria-label="search"
-    />
-    <button class="btn btn-secondary--custom header__search" type="submit">
-      Send
-    </button>
+<div class="subnavbar pt-4 pb-5 bg-white">
+  <form class="">
+
+    <div class="form-floating d-flex container px-0">
+      <textarea
+        class="form-control me-2"
+        placeholder="Leave a comment here"
+        id="floatingTextarea"
+        aria-label="search"
+      ></textarea>
+      <label for="floatingTextarea">Leave a comment here</label>
+      <button class="btn btn-secondary--custom header__search" type="submit">
+        Send
+      </button>
+    </div>
   </form>
 </div>
 <div>
-  <div class="d-flex bd-highlight container__commentaire rounded ">
+  <div class="d-flex bd-highlight container__commentaire rounded">
     <div class="p-4 flex-shrink-1 bd-highlight">
       <div class="user__img">
         <img
@@ -26,8 +30,15 @@ block body %}
     </div>
     <div class="p-4 w-100 bd-highlight">
       <div class="d-flex justify-content-between">
-        <a class="name__user t-link--active fw-bold" href="">dorian</a>
-        <p class="text__commentaire mb-0 text-end text-secondary">il y a une semaine</p>
+        <a
+          class="name__user t-link--active fw-bold"
+          style="min-height: 27px"
+          href=""
+          >Dorian</a
+        >
+        <p class="text__commentaire mb-0 text-end text-secondary">
+          il y a une semaine
+        </p>
       </div>
       <div class="">
         <img
@@ -43,7 +54,7 @@ block body %}
     </div>
   </div>
   <br />
-  <div class="d-flex bd-highlight container__commentaire rounded ">
+  <div class="d-flex bd-highlight container__commentaire rounded">
     <div class="p-4 flex-shrink-1 bd-highlight">
       <div class="user__img">
         <img
@@ -55,37 +66,15 @@ block body %}
     </div>
     <div class="p-4 w-100 bd-highlight">
       <div class="d-flex justify-content-between">
-        <a class="name__user t-link--active fw-bold" href="">dorian</a>
-        <p class="text__commentaire mb-0 text-end text-secondary">il y a une semaine</p>
-      </div>
-      <div class="">
-        <img
-          src="{{ absolute_url(asset('images/stars.png')) }}"
-          class="card-img-top"
-          alt=""
-          style="max-width: 60px"
-        />
-        <p class="text__commentaire mt-3 mb-0">
-          Super ! Vendeuse hyper sympa avec des articles de qualités
+        <a
+          class="name__user t-link--active fw-bold"
+          style="min-height: 27px"
+          href=""
+          >Dorian</a
+        >
+        <p class="text__commentaire mb-0 text-end text-secondary">
+          il y a une semaine
         </p>
-      </div>
-    </div>
-  </div>
-  <br />
-  <div class="d-flex bd-highlight container__commentaire rounded ">
-    <div class="p-4 flex-shrink-1 bd-highlight">
-      <div class="user__img">
-        <img
-          src="{{ absolute_url(asset('images/logo.png')) }}"
-          class="card-img-top"
-          alt="LeBonCoin"
-        />
-      </div>
-    </div>
-    <div class="p-4 w-100 bd-highlight">
-      <div class="d-flex justify-content-between">
-        <a class="name__user t-link--active fw-bold" href="">dorian</a>
-        <p class="text__commentaire mb-0 text-end text-secondary">il y a une semaine</p>
       </div>
       <div class="">
         <img
@@ -101,55 +90,6 @@ block body %}
     </div>
   </div>
   <br />
-  <div class="d-flex bd-highlight container__commentaire rounded ">
-    <div class="p-4 flex-shrink-1 bd-highlight">
-      <div class="user__img">
-        <img
-          src="{{ absolute_url(asset('images/logo.png')) }}"
-          class="card-img-top"
-          alt="LeBonCoin"
-        />
-      </div>
-    </div>
-    <div class="p-4 w-100 bd-highlight">
-      <div class="d-flex justify-content-between">
-        <a class="name__user t-link--active fw-bold" href="">Dorian</a>
-        <p class="text__commentaire mb-0 text-end text-secondary">il y a une semaine</p>
-      </div>
-      <div class="">
-        <p class="mt-1 mb-0">img etoiles</p>
-        <p class="text__commentaire mt-3 mb-0">
-          Super ! Vendeuse hyper sympa avec des articles de qualités
-        </p>
-      </div>
-    </div>
-  </div>
-  <br />
-  <div class="d-flex bd-highlight container__commentaire rounded ">
-    <div class="p-4 flex-shrink-1 bd-highlight">
-      <div class="user__img">
-        <img
-          src="{{ absolute_url(asset('images/logo.png')) }}"
-          class="card-img-top"
-          alt="LeBonCoin"
-        />
-      </div>
-    </div>
-    <div class="p-4 w-100 bd-highlight">
-      <div class="d-flex justify-content-between">
-        <a class="name__user t-link--active fw-bold" href="">dorian</a>
-        <p class="text__commentaire mb-0 text-end text-secondary">il y a une semaine</p>
-      </div>
-      <div class="">
-        <p class="mt-1 mb-0">img etoiles</p>
-        <p class="text__commentaire mt-3 mb-0">
-          Super ! Vendeuse hyper sympa avec des articles de qualités
-        </p>
-      </div>
-    </div>
-  </div>
-  <br />
-
 </div>
 
 {% endblock %}
