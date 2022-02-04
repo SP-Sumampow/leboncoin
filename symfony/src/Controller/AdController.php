@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Repository\AdRepository;
+use App\Repository\TagRepository;
 use App\Service\MessageGenerator;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Routing\Annotation\Route;
@@ -12,14 +14,19 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class AdController extends AbstractController
 {
     /**
-     * @Route("/ads/{categoryId}",
+     * @Route("/ads/{tagId}",
      *     name="getAds",
      *     methods={"GET","HEAD"})
      */
-    public function showAds(LoggerInterface $logger, string $categoryId): Response
+    public function showAds(LoggerInterface $logger, string $tagId, AdRepository $adRepository, TagRepository $tagRepository): Response
     {
+        $tag = $tagRepository->find($tagId);
+        $tags = $tagRepository->findAll();
+
         return $this->render('ad/ads.html.twig', [
-            'string' => $categoryId,
+            'tags' => $tags,
+            'tagName' => $tag->getName(),
+            'ads' => $adRepository->findAllAdForCategoryId($tagId)
         ]);
     }
 
@@ -28,10 +35,12 @@ class AdController extends AbstractController
      *     name="getAd",
      *     methods={"GET","HEAD"})
      */
-    public function showAd(string $id): Response
+    public function showAd(string $id, AdRepository $adRepository, TagRepository $tagRepository): Response
     {
+        $tags = $tagRepository->findAll();
         return $this->render('ad/ad.html.twig', [
-            'string' => $id,
+            'tags' => $tags,
+            'ad' => $adRepository->find($id),
         ]);
     }
 

@@ -1,22 +1,6 @@
-{# templates/home/commentaire.html.twig #} {% extends "./layout.html.twig" %} {%
-block body %}
-<div class="subnavbar pt-4 pb-5 bg-white">
-  <form class="">
 
-    <div class="form-floating d-flex container px-0">
-      <textarea
-        class="form-control me-2"
-        placeholder="Leave a comment here"
-        id="floatingTextarea"
-        aria-label="search"
-      ></textarea>
-      <label for="floatingTextarea">Leave a comment here</label>
-      <button class="btn btn-secondary--custom header__search" type="submit">
-        Send
-      </button>
-    </div>
-  </form>
-</div>
+<h3 class="py-4">Messages</h3>
+
 <div>
   <div class="d-flex bd-highlight container__commentaire rounded">
     <div class="p-4 flex-shrink-1 bd-highlight">
@@ -92,4 +76,21 @@ block body %}
   <br />
 </div>
 
-{% endblock %}
+
+<div class="subnavbar pt-4 pb-5 bg-white">
+  <form class="">
+
+    <div class="form-floating d-flex container px-0">
+      <textarea
+        class="form-control me-2"
+        placeholder="Leave a comment here"
+        id="floatingTextarea"
+        aria-label="search"
+      ></textarea>
+      <label for="floatingTextarea">Leave a comment here</label>
+      <button class="btn btn-secondary--custom header__search" type="submit">
+        Send
+      </button>
+    </div>
+  </form>
+</div>

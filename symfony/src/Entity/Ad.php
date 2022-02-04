@@ -230,14 +230,6 @@ class Ad
         return $this;
     }
 
-    /**
-     * @return Collection|Media[]
-     */
-    public function getMedias(): Collection
-    {
-        return $this->medias;
-    }
-
     public function addMedia(Media $media): self
     {
         if (!$this->medias->contains($media)) {
@@ -296,7 +288,6 @@ class Ad
         return $this;
     }
 
-
     public function getValidationCode(): ?string
     {
         return $this->validationCode;
@@ -309,4 +300,25 @@ class Ad
         return $this;
     }
 
+    public function priceFormated(): string
+    {
+        return sprintf("%.2f", $this->price / 100);
+    }
+
+    public function getCoverPicture(): string
+    {
+        $medias = $this->getMedias()->toArray();
+        if (count($medias) == 0) {
+            return "";
+        }
+        return $medias[0]->getUrl();
+    }
+
+    /**
+     * @return Collection|Media[]
+     */
+    public function getMedias(): Collection
+    {
+        return $this->medias;
+    }
 }
