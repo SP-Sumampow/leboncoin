@@ -13,6 +13,7 @@ return array(
     'App\\Controller\\SignInController' => $baseDir . '/src/Controller/SignInController.php',
     'App\\Controller\\SignUpController' => $baseDir . '/src/Controller/SignUpController.php',
     'App\\Controller\\UserController' => $baseDir . '/src/Controller/UserController.php',
+    'App\\Controller\\api\\ApiAdController' => $baseDir . '/src/Controller/api/ApiAdController.php',
     'App\\Controller\\api\\ApiUserController' => $baseDir . '/src/Controller/api/ApiUserController.php',
     'App\\DataFixtures\\AdFixtures' => $baseDir . '/src/DataFixtures/AdFixtures.php',
     'App\\DataFixtures\\MediaFixtures' => $baseDir . '/src/DataFixtures/MediaFixtures.php',

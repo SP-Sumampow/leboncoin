@@ -6,6 +6,7 @@ use App\Repository\MessageRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: MessageRepository::class)]
 class Message
@@ -13,6 +14,7 @@ class Message
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[groups(["show_ad", "list_ad"])]
     private $id;
 
     #[ORM\Column(type: 'text')]
@@ -20,6 +22,7 @@ class Message
 
     #[Gedmo\Timestampable(on: 'create')]
     #[ORM\Column(name: 'created', type: Types::DATETIME_MUTABLE)]
+    #[groups(["show_ad", "list_ad"])]
     private $created;
 
     #[ORM\Column(name: 'updated', type: Types::DATETIME_MUTABLE)]

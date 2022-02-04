@@ -6,6 +6,7 @@ use App\Repository\MediaRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: MediaRepository::class)]
 class Media
@@ -13,12 +14,15 @@ class Media
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[groups(["show_ad", "list_ad"])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[groups(["show_ad", "list_ad"])]
     private $url;
 
     #[ORM\Column(type: 'integer', length: 255)]
+    #[groups(["show_ad", "list_ad"])]
     private $type;
 
     #[Gedmo\Timestampable(on: 'create')]
