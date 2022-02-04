@@ -28,10 +28,10 @@ class AdController extends AbstractController
      *     name="getAd",
      *     methods={"GET","HEAD"})
      */
-    public function showAd(int $id): Response
+    public function showAd( $id): Response
     {
         return $this->render('ad/ad.html.twig', [
-            'number' => $id,
+            'string' => $id,
         ]);
     }
 }

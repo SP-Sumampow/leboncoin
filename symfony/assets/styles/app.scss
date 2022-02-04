@@ -30,12 +30,21 @@ body {
 
   &--active {
     color: $color-verdigris !important;
-    
+
     &:hover {
       transition: ease-in 300ms;
       color: $color-verdigris !important;
       border-bottom: solid 1px $color-verdigris;
     }
+  }
+}
+
+.a-icon {
+  fill: #222;
+  transition: ease-in 300ms;
+
+  &:hover {
+    fill: $color-verdigris;
   }
 }
 
@@ -65,7 +74,6 @@ body {
       background-color: $color-bluegraphite !important;
       border-color: $color-bluegraphite !important;
       color: white;
-
     }
   }
   &-secondary--custom {
@@ -74,7 +82,6 @@ body {
     transition: ease-in 300ms;
     color: white;
 
-
     &:hover {
       transition: ease-in 300ms;
       background-color: $color-yellow !important;
@@ -82,12 +89,36 @@ body {
       color: white;
     }
   }
+
+  &-outline-secondary--custom {
+    border-color: $color-verdigris !important;
+    transition: ease-in 300ms;
+    color: $color-verdigris;
+
+    &:hover {
+      transition: ease-in 300ms;
+      border-color: $color-bluegraphite !important;
+      color: $color-bluegraphite;
+    }
+  }
 }
 
-.signin, .signup {
+.dropdown {
+  &-menu {
+    border: none;
+    box-shadow: 0 0 16px rgb(13 35 57 / 10%);
+  }
+  &-item {
+    &:hover {
+      background-color: #28b0b09a;
+      color: #222;
+    }
+  }
+}
 
+.signin,
+.signup {
   .form-container {
     max-height: 50vh;
-
   }
 }

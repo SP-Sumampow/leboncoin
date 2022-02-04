@@ -1,7 +1,7 @@
 <header class="header ">
   <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 text-light">
     <div class="container">
-      <a class="navbar-brand mr-20 header__logo" href="/">
+      <a class="navbar-brand mr-30 header__logo" href="/">
         <img src="{{ absolute_url(asset('images/logo.png')) }}" class="card-img-top  " alt="LeBonCoin">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,29 +9,26 @@
       </button>
       <div class="collapse navbar-collapse me-auto d-flex-md justify-content-between" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 me-4 ">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Accueil</a>
+          <li class="nav-item px-0 mx-2" style="min-height: 26px;">
+            <a class="nav-link p-0 active a-icon" aria-current="page" href="/"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="house" class="svg-inline--fa fa-house" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="" d="M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z"></path></svg></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Contact</a>
+          <li class="nav-item px-0 mx-2">
+            <a class="nav-link p-0 active t-link" href="/">Contact</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown px-0 mx-2">
+            <a class="nav-link p-0 active t-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Category
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Cars</a></li>
-              <li><a class="dropdown-item" href="#">Mens clothes</a></li>
-              <li><a class="dropdown-item" href="#">Womens clothes</a></li>
-              <li><a class="dropdown-item" href="#">Decoration</a></li>
-              <li><a class="dropdown-item" href="#">DIY</a></li>
-              <li><a class="dropdown-item" href="#">Home appliances</a></li>
-              <li><a class="dropdown-item" href="#">Books</a></li>
-              <li><a class="dropdown-item" href="#">Game for kids</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="/ad/Cars">Cars</a></li>
+              <li><a class="dropdown-item" href="/ad/Mens clothes">Mens clothes</a></li>
+              <li><a class="dropdown-item" href="/ad/Womens clothes/">Womens clothes</a></li>
+              <li><a class="dropdown-item" href="/ad/Decoration">Decoration</a></li>
+              <li><a class="dropdown-item" href="/ad/DIY">DIY</a></li>
+              <li><a class="dropdown-item" href="/ad/Home appliances">Home appliances</a></li>
+              <li><a class="dropdown-item" href="/ad/Books">Books</a></li>
+              <li><a class="dropdown-item" href="/ad/Game for kids">Game for kids</a></li>
+    
             </ul>
           </li>
         </ul>
