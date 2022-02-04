@@ -34,4 +34,14 @@ class AdController extends AbstractController
             'string' => $id,
         ]);
     }
+
+    /**
+     * @Route("postAd",
+     *     name="postAd",
+     *     methods={"GET","POST"})
+     */
+    public function postAd(): Response
+    {
+        return $this->render('ad/postAd.html.twig');
+    }
 }

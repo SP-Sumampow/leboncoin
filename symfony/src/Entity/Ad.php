@@ -16,27 +16,27 @@ class Ad
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
-    #[groups(["show_ad", "list_ad"])]
+    #[groups(["show_ad", "list_ad", "created_ad"])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[groups(["show_ad", "list_ad"])]
+    #[groups(["show_ad", "list_ad", "created_ad"])]
     private $title;
 
     #[ORM\Column(type: 'text')]
-    #[groups(["show_ad", "list_ad"])]
+    #[groups(["show_ad", "list_ad", "created_ad"])]
     private $description;
 
     #[ORM\Column(type: 'integer')]
-    #[groups(["show_ad", "list_ad"])]
+    #[groups(["show_ad", "list_ad", "created_ad"])]
     private $price;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[groups(["show_ad", "list_ad"])]
+    #[groups(["show_ad", "list_ad", "created_ad"])]
     private $postalCode;
 
     #[ORM\Column(type: 'integer', length: 255)]
-    #[groups(["show_ad", "list_ad"])]
+    #[groups(["show_ad", "list_ad", "created_ad"])]
     private $status;
 
     #[Gedmo\Timestampable(on: 'create')]
@@ -71,15 +71,15 @@ class Ad
     private $medias;
 
     #[ORM\ManyToMany(targetEntity: Tag::class, inversedBy: 'ads', cascade: ['persist'])]
-    #[groups(["show_ad", "list_ad"])]
+    #[groups(["show_ad", "list_ad", "created_ad"])]
     private $tags;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[groups(["show_ad", "list_ad"])]
+    #[groups(["show_ad", "list_ad", "created_ad"])]
     private $currency;
 
     #[ORM\Column(type: 'string', length: 6)]
-    #[groups(["show_ad", "list_ad"])]
+    #[groups(["show_ad", "list_ad", "created_ad"])]
     private $validationCode;
 
     public function __construct()

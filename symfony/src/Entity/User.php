@@ -28,6 +28,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $email;
 
     #[ORM\Column(type: 'json')]
+    #[Ignore()]
     private $roles = [];
 
     #[ORM\Column(type: 'string')]
@@ -43,9 +44,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $updated;
 
     #[ORM\OneToMany(mappedBy: 'seller', targetEntity: Ad::class, orphanRemoval: true)]
+    #[groups(["show_user"])]
     private $sellAds;
 
     #[ORM\OneToMany(mappedBy: 'buyer', targetEntity: Ad::class)]
+    #[groups(["show_user"])]
     private $BuyAds;
 
     public function __construct()

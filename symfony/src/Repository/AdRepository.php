@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Ad;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use phpDocumentor\Reflection\Types\Integer;
 
 /**
  * @method Ad|null find($id, $lockMode = null, $lockVersion = null)
@@ -14,37 +15,22 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class AdRepository extends ServiceEntityRepository
 {
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Ad::class);
     }
 
-    // /**
-    //  * @return Ad[] Returns an array of Ad objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @return Ad[] Returns an array of Ad objects
+     */
+    public function findAllAdForCategoryId(string $categoryId)
     {
         return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('a.id', 'ASC')
-            ->setMaxResults(10)
+            ->innerJoin('a.tags', 't')
+            ->where('t.id = :categoryId')
+            ->setParameter('categoryId', $categoryId)
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
     }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Ad
-    {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }
