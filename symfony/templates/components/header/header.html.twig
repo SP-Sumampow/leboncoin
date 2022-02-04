@@ -36,14 +36,32 @@
           </li>
         </ul>
         <div class="log">
+          {% if is_granted('ROLE_USER')%}
+
+          {% else %}
+
           <a href="{{ url("signUp") }}">            
             <button class="btn btn-secondary--custom text-light" type="submit">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-pen" class="svg-inline--fa fa-user-pen" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#FFFFF2" d="M223.1 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 223.1 256zM274.7 304H173.3C77.61 304 0 381.7 0 477.4C0 496.5 15.52 512 34.66 512h286.4c-1.246-5.531-1.43-11.31-.2832-17.04l14.28-71.41c1.943-9.723 6.676-18.56 13.68-25.56l45.72-45.72C363.3 322.4 321.2 304 274.7 304zM371.4 420.6c-2.514 2.512-4.227 5.715-4.924 9.203l-14.28 71.41c-1.258 6.289 4.293 11.84 10.59 10.59l71.42-14.29c3.482-.6992 6.682-2.406 9.195-4.922l125.3-125.3l-72.01-72.01L371.4 420.6zM629.5 255.7l-21.1-21.11c-14.06-14.06-36.85-14.06-50.91 0l-38.13 38.14l72.01 72.01l38.13-38.13C643.5 292.5 643.5 269.7 629.5 255.7z"></path></svg> Sign up</button>
           </a>
-          <a href="{{ url("signIn") }}">            
-            <button class="btn btn-secondary--custom text-light" type="submit"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-user" class="svg-inline--fa fa-circle-user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#FFFFF2" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c39.77 0 72 32.24 72 72S295.8 272 256 272c-39.76 0-72-32.24-72-72S216.2 128 256 128zM256 448c-52.93 0-100.9-21.53-135.7-56.29C136.5 349.9 176.5 320 224 320h64c47.54 0 87.54 29.88 103.7 71.71C356.9 426.5 308.9 448 256 448z"></path></svg> Log in</button>
-          </a>
+          {% endif %}
+          {% if is_granted('ROLE_ADMIN')%}
+          <a href="/commentaire">            
+            <button class="btn btn-secondary--custom text-light" type="submit">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" class="svg-inline--fa fa-comments" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#FFFFF2" d="M416 176C416 78.8 322.9 0 208 0S0 78.8 0 176c0 39.57 15.62 75.96 41.67 105.4c-16.39 32.76-39.23 57.32-39.59 57.68c-2.1 2.205-2.67 5.475-1.441 8.354C1.9 350.3 4.602 352 7.66 352c38.35 0 70.76-11.12 95.74-24.04C134.2 343.1 169.8 352 208 352C322.9 352 416 273.2 416 176zM599.6 443.7C624.8 413.9 640 376.6 640 336C640 238.8 554 160 448 160c-.3145 0-.6191 .041-.9336 .043C447.5 165.3 448 170.6 448 176c0 98.62-79.68 181.2-186.1 202.5C282.7 455.1 357.1 512 448 512c33.69 0 65.32-8.008 92.85-21.98C565.2 502 596.1 512 632.3 512c3.059 0 5.76-1.725 7.02-4.605c1.229-2.879 .6582-6.148-1.441-8.354C637.6 498.7 615.9 475.3 599.6 443.7z"></path></svg> My reviews</button>
+          </a>          
+          {% endif %}
 
+          {% if is_granted('ROLE_USER')%}
+          <a href="{{ url("logout") }}">            
+            <button class="btn btn-secondary--custom text-light" type="submit"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-xmark" class="svg-inline--fa fa-user-xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#FFFFF2" d="M274.7 304H173.3C77.61 304 0 381.6 0 477.3C0 496.5 15.52 512 34.66 512h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM224 256c70.7 0 128-57.31 128-128S294.7 0 224 0C153.3 0 96 57.31 96 128S153.3 256 224 256zM577.9 223.1l47.03-47.03c9.375-9.375 9.375-24.56 0-33.94s-24.56-9.375-33.94 0L544 190.1l-47.03-47.03c-9.375-9.375-24.56-9.375-33.94 0s-9.375 24.56 0 33.94l47.03 47.03l-47.03 47.03c-9.375 9.375-9.375 24.56 0 33.94c9.373 9.373 24.56 9.381 33.94 0L544 257.9l47.03 47.03c9.373 9.373 24.56 9.381 33.94 0c9.375-9.375 9.375-24.56 0-33.94L577.9 223.1z"></path></svg> Log off</button>
+          </a>
+          {% else %}
+          <a href="{{ url("signIn") }}">            
+            <button class="btn btn-secondary--custom text-light" type="submit">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-check" class="svg-inline--fa fa-user-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#FFFFF2" d="M274.7 304H173.3C77.61 304 0 381.6 0 477.3C0 496.5 15.52 512 34.66 512H413.3C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM224 256c70.7 0 128-57.31 128-128S294.7 0 224 0C153.3 0 96 57.31 96 128S153.3 256 224 256zM632.3 134.4c-9.703-9-24.91-8.453-33.92 1.266l-87.05 93.75l-38.39-38.39c-9.375-9.375-24.56-9.375-33.94 0s-9.375 24.56 0 33.94l56 56C499.5 285.5 505.6 288 512 288h.4375c6.531-.125 12.72-2.891 17.16-7.672l104-112C642.6 158.6 642 143.4 632.3 134.4z"></path></svg> Login</button>
+          </a>
+          {% endif %}
         </div>
       </div>
     </div>

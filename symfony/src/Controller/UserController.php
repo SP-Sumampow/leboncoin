@@ -15,4 +15,20 @@ class UserController extends AbstractController
     {
         return $this->render('user/user.html.twig');
     }
+
+    /**
+     * + @Route("/user/buyAds", "buy_ads")
+     */
+    public function buyAds(): Response
+    {
+        return $this->render('user/buyAds.html.twig');
+    }
+
+    /**
+     * + @Route("/user/sellAds", "sell_ads")
+     */
+    public function sellAds(): Response
+    {
+        return $this->render('user/sellAds.html.twig');
+    }
 }
